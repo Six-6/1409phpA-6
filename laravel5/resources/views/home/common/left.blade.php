@@ -105,20 +105,20 @@
             <ul id="user-nav">
                 <li class="" id="nav_left_1">
                     <dl class="user-sub-nav cf">
-                        <dd><a href="">线路订单</a></dd>
+                        <dd><a href="orderAdd">线路订单</a></dd>
                         <dd><a href="">酒店订单</a></dd>
                         <dd><a href="">门票订单</a></dd>
                     </dl>
-                    <a href="http://www.byts.com.cn/users/order.php?po=all" class="mlink">我的订单</a>
+                    <a href="" class="mlink">我的订单</a>
                 </li>
                 <li class="" id="nav_left_2">
                     <dl class="user-sub-nav cf">
-                        <dd><a href="http://www.byts.com.cn/users/index.php?do=money">我的积分</a></dd>
-
+                        <dd><a href="integralAdd">我的积分</a></dd>
                     </dl>
-                    <a href="http://www.byts.com.cn/users/index.php?do=money" class="mlink">我的积分</a>
+                    <a href="#" class="mlink">我的积分</a>
+
                 </li>
-                <li class="" id="nav_left_3"><a href="http://www.byts.com.cn/users/order.php?po=dianping" class="mlink">我的点评</a></li>
+                <li class="" id="nav_left_3"><a href="viewAdd" class="mlink">我的点评</a></li>
                 <li class="" id="nav_left_4">
                     <dl class="user-sub-nav cf">
                         <dd><a href="personAdd">个人资料</a></dd>
@@ -186,9 +186,6 @@
 
             });
         </script>
-        <div id="main">
-
-        </div>
 
 
 

@@ -185,6 +185,14 @@
 						</ul>
 					</div>
 				</li>
+				<li class="public-ifame-item">
+					<a href="javascript:;">当季推荐</a>
+					<div class="ifame-item-sub">
+						<ul>
+							<li><a href="{{URL('admin/inseason')}}" target="content">当季推荐</a></li>
+						</ul>
+					</div>
+				</li>
 			</ul>
 		</div>
 		<!-- 右侧内容展示部分 -->

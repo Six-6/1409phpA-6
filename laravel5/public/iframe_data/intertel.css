@@ -1,0 +1,165 @@
+/*
+ * modify by ouyangyibin at 2015-11-16 11:02:11
+ */
+
+/* 途牛会员登录 start */
+.index1200 .input_div_left{
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-right: 4px;
+    width: 120px;
+    *z-index: 5;
+}
+.zone_val{
+    position: relative;
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    width: 110px;
+    line-height: 22px;
+    font-size: 12px;
+    background-color: #FFF;
+    cursor: pointer;
+    z-index: 20;
+}
+.zone_tri{
+    position: absolute;
+    top: 14px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border: 4px transparent solid;
+    border-top: 4px #DDD solid;
+    z-index: 22;
+}
+.zones{
+    position: absolute;
+    top: 31px;
+    left: -1px;
+    display: block;
+    padding: 8px 10px;
+    width: 448px;
+    background-color: #FFF;
+    border: 1px #C4F269 solid;
+    z-index: 18;
+}
+.zones_title{
+    width: inherit;
+    height: 30px;
+}
+.zones_title ul.ul_zones_title{
+    height: 30px;
+    border-bottom: 1px #DDD solid;
+}
+.zones_title ul.ul_zones_title li{
+    display: inline;
+    float: left;
+    margin-right: 1px;
+    padding: 0 2.43px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #FFF;
+    border-left: 1px #FFF solid;
+    border-right: 1px #FFF solid;
+    cursor: pointer;
+}
+.zones_title ul.ul_zones_title li.li_active{
+    height: 29px;
+    line-height: 26px;
+    border-top: 2px #43B311 solid;
+    border-left: 1px #DDD solid;
+    border-right: 1px #DDD solid;
+}
+.zones_tabcont{
+    margin-top: 6px;
+    width: inherit;
+}
+.zones_tabcont ul.ul_tabcont{
+    *overflow: hidden;
+    *zoom: 1;
+}
+.zones_tabcont ul.ul_tabcont:after{
+    display: table;
+    width: 0;
+    content: "";
+    clear: both;
+}
+.zones_tabcont ul.ul_tabcont li{
+    overflow: visible;
+    display: inline;
+    float: left;
+    margin: 2px 8px;
+    margin-left: 0;
+    width: 106px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.zones_tabcont ul.ul_tabcont li:hover{
+    color: #895;
+}
+.zones_tabcont ul.ul_tabcont li.li_clicked{
+    color: #895;
+}
+.index1200 .input_div_right{
+    display: inline-block;
+    float: right;
+    width: 200px;
+}
+.index1200 .input_div_right input[type=text]{
+    padding-left: 5px;
+    width: 190px;
+    background-image: none;
+}
+
+/* ---------- 1000 ---------- start */
+.index1000 .input_div_left{
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-right: 4px;
+    width: 120px;
+    *z-index: 5;
+}
+.index1000 .zone_val{
+    width: 110px;
+}
+.index1000 .zone_tri{
+}
+.index1000 .zones{
+}
+.index1000 .zones_title{
+}
+.index1000 .zones_title ul.ul_zones_title{
+}
+.index1000 .zones_title ul.ul_zones_title li{
+}
+.index1000 .zones_title ul.ul_zones_title li.li_active{
+}
+.index1000 .zones_tabcont{
+}
+.index1000 .zones_tabcont ul.ul_tabcont{
+}
+.index1000 .zones_tabcont ul.ul_tabcont li{
+}
+.index1000 .zones_tabcont ul.ul_tabcont li:hover{
+}
+.index1000 .zones_tabcont ul.ul_tabcont li.li_clicked{
+}
+.index1000 .input_div_right{
+    display: inline-block;
+    float: right;
+    width: 151px;
+}
+.index1000 .input_div_right input[type=text]{
+    padding-left: 5px;
+    width: 148px;
+    background-image: none;
+}
+.input_div a.aChangeBorder {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: #2e9900;
+}

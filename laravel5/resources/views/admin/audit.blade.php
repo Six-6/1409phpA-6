@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>游记管理</title>
-	<link rel="stylesheet" href="./css/reset.css" />
-	<link rel="stylesheet" href="./css/content.css" />
+	<link rel="stylesheet" href="../admin/css/reset.css" />
+	<link rel="stylesheet" href="../admin/css/content.css" />
 </head>
 <body marginwidth="0" marginheight="0">
 	<div class="container">
