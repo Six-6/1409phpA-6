@@ -57,24 +57,6 @@ Route::get('home/pswAdd',"home\UserController@psw");//密码改动
 
 
 
-/************************* 后台 游记管理 ******************************/
-//Route::get('admin/in', 'admin\IndexController@index');//后台主页
-
-Route::get('admins', 'admin\TravelnotesController@indexs');//游记管理
-Route::get('admin/travelnotes', 'admin\TravelnotesController@index');//游记管理
-Route::get('admin/travelsupdata', 'admin\TravelnotesController@updata');//审核
-Route::get('admin/classics', 'admin\TravelnotesController@classics');//经典回顾
-Route::get('admin/travelsdelete', 'admin\TravelnotesController@deletes');//游记删除
-Route::get('admin/travelsdelet', 'admin\TravelnotesController@delet');//游记删除
-Route::get('admin/audit', 'admin\TravelnotesController@audit');//展示待审核
-
-/*****************************当季 推荐*********************************/
-Route::get('admin/inseason', 'admin\InseasonController@index');//游记管理
-Route::post('admin/seaadd', 'admin\InseasonController@seaadd');//游记管理
-
-
-
-
 
 
 
@@ -658,7 +640,7 @@ Route::get('home/ranking', 'season\RankingController@index');//排行榜
 
 
 
-Route::get('domindex','DomesticController@domindex');
+Route::get('domestic','DomesticController@index');
 
 
 

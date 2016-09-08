@@ -12,7 +12,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use Redirect;
-use App\Order;
+// use App\Tourism;
 use Session;
 use DB;
 use Input;
@@ -24,7 +24,7 @@ class DomesticController extends BaseController{
 	* @return Request $request 接收值
 	**/
     public function index(Request $request){
-        return view('');
+        return view('domestic/domestic_list');
     }
 
 }

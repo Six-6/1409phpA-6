@@ -28,8 +28,6 @@ class AdminController extends BaseController
     */
     public function add(Request $request)
     {
-
-        if (empty($request->input("u_name"))){
         if (empty($request->input('u_name'))) {
             $user = DB::table("role")->get();
             return view("admin.user.add", ['user' => $user]);
@@ -37,14 +35,11 @@ class AdminController extends BaseController
             $rid = $request->input("rid");
             $uname = $request->input("u_name");
             $pwd = $request->input("u_pwd");
-            DB::table("users")->insert(['u_name' => $uname, 'u_pwd' => $pwd, 'rid' => $rid]);
-            return Redirect::to("admin/userShow");
             $res=DB::table("users")->insert(['u_name' => $uname, 'u_pwd' => $pwd, 'rid' => $rid]);
             if($res)
             {
                 return Redirect::to("admin/userShow");
             }
-
         }
     }
     /**
@@ -78,8 +73,6 @@ class AdminController extends BaseController
         $path = $file->move('./admin/upload', $newName);//将图片放到storage/uploads下
         $path1 = str_replace('\\', '/', $path);
         $paths = "." . $path1;
-        DB::table("users")->where("u_id", $id)->update(['u_email' => $email, 'u_phone' => $phone, 'path' => $paths, "u_time" => $time]);
-        return Redirect::to("admin/userShow");
         $res=DB::table("users")->where("u_id", $id)->update(['u_email' => $email, 'u_phone' => $phone, 'path' => $paths, "u_time" => $time]);
         if($res)
         {
@@ -120,6 +113,7 @@ class AdminController extends BaseController
     {
         $id = $request->input("id");
         Users::del($id);
+
         return Redirect::to("admin/userShow");
     }
 }
