@@ -29,6 +29,7 @@
 					<tr id="yi{{ $v->s_id }}">
 						<td>{{$v->s_id}}</td>
 						<td><img class="thumb" src="../image/one/shopphoto/{{$v->s_img}}" width="30px" height="30px" /></td>
+						<td><img class="thumb" src="../admin/images/{{$v->s_img}}" width="30px" height="30px" /></td>
 						<td onclick="dians({{ $v->s_id }})">              
 	                        <input type="text" id="aa{{$v->s_id}}" value="{{$v->s_name}}" style="display:none" onblur="gai({{$v->s_id}})">
 	                        <span id="s{{$v->s_id}}">{{$v->s_name}}</span>
