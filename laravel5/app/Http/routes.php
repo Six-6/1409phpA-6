@@ -640,8 +640,8 @@ Route::get('home/ranking', 'season\RankingController@index');//排行榜
 
 
 
-Route::get('domestic','DomesticController@index');
-
+Route::get('home/domestic','home\DomesticController@index');/**国内游展示**/
+Route::get('home/contrast','home\DomesticController@contrast');/**经典对比**/
 
 
 
