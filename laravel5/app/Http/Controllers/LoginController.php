@@ -40,7 +40,7 @@ class LoginController extends Controller {
             {
                 Session::put('u_id',$res->u_id);
                 Session::put('name',$name);
-                return Redirect::to('home/personAdd');
+                return Redirect::to('/');
             }else {
                 echo "<script>alert('用户名或密码错误,请从新登陆');location.href='lo'</script>";
             }   

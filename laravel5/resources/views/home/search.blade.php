@@ -373,7 +373,7 @@ window.onerror=function(){return true;}
                 <ul class="content3"> 
        <li><a class="yes" href="javascript:void(0)" id="p1_0_p2_0" onclick="ListUrl(this.id);return false;">不限</a></li>
        <li><a href="javascript:void(0)" id="p1_1_p2_100" onclick="sous2([0,100])">¥100以下</a></li>
-      <li><a href="javascript:void(0)" id="p1_101_p2_200" onclick="sous2([100,200])">¥101-200</a></li>
+      <li><a href="javascript:void(0)" id="p1_101_p2_200" onclick="sous2([101,200])">¥101-200</a></li>
       <li><a href="javascript:void(0)" id="p1_201_p2_500" onclick="sous2([201,500])">¥201-500</a></li>
       <li><a href="javascript:void(0)" id="p1_501_p2_1000" onclick="sous2([501,1000])">¥501-1000</a></li>
      <li> <a href="javascript:void(0)" id="p1_1001_p2_2000" onclick="sous2([1001,2000])">¥1001-2000</a></li>
@@ -402,13 +402,14 @@ window.onerror=function(){return true;}
 </div>
       <div class="clear"></div>
      </div>
+
      <div id="replaces" class="Ny_search_showcon_midd">
         
         @foreach($souarr as $souz)
           <div class="Ny_search_showcon_middlist">
               <div class="Ny_search_showcon_midd_fl">
                 <a href="http://www.byts.com.cn/travel/12030.html" target="_blank">
-                  <img src="../image/one/shopphoto/{{$souz->s_img}}" height="100px" width="125px">
+                  <img src="{{$souz->s_img}}" height="100px" width="125px">
                 </a>
               </div> 
             <div class="Ny_search_showcon_midd_fr">
@@ -439,84 +440,13 @@ window.onerror=function(){return true;}
     <div class="clear"></div>
   </div>
   
-  
-   
-  
- 
+
 <div style="clear:both;"></div>
 <div class="ufooter">
     <div class="footer01">
         <div class="newWarp">
             <div class="foot_faq">
             
-            <div class="faq_container01">
-                    <span class="faq_class"><strong>预订常见问题</strong></span>
-                    <ul>
-                    
-                    
- <li><a href="http://www.byts.com.cn/help/1/chunwan.htm" title="纯玩是什么意思？" target="_blank">纯玩是什么意思？</a></li>
-<li><a href="http://www.byts.com.cn/help/1/help538.html" title="单房差是什么？" target="_blank">单房差是什么？</a></li>
-<li><a href="http://www.byts.com.cn/help/1/help537.html" title="双飞、双卧都是什么意思？" target="_blank">双飞、双卧都是什么意思？</a></li>
-<li><a href="http://www.byts.com.cn/help/1/help536.html" title="满意度是怎么计算的？" target="_blank">满意度是怎么计算的？</a></li>
- 
-                       
-                       
-                    </ul>
-                </div><div class="faq_container01">
-                    <span class="faq_class"><strong>付款和发票</strong></span>
-                    <ul>
-                    
-                    
- <li><a href="http://www.byts.com.cn/help/2/help543.html" title="签约可以刷卡吗？" target="_blank">签约可以刷卡吗？</a></li>
-<li><a href="http://www.byts.com.cn/help/2/help542.html" title="付款方式有哪些？" target="_blank">付款方式有哪些？</a></li>
-<li><a href="http://www.byts.com.cn/help/2/help541.html" title="怎么网上支付？" target="_blank">怎么网上支付？</a></li>
-<li><a href="http://www.byts.com.cn/help/2/help540.html" title="如何获取发票？" target="_blank">如何获取发票？</a></li>
- 
-                       
-                       
-                    </ul>
-                </div><div class="faq_container01">
-                    <span class="faq_class"><strong>签署旅游合同</strong></span>
-                    <ul>
-                    
-                    
- <li><a href="http://www.byts.com.cn/help/3/help547.html" title="有旅游合同范本下载吗？" target="_blank">有旅游合同范本下载吗？</a></li>
-<li><a href="http://www.byts.com.cn/help/3/help546.html" title="门市地址在哪里？" target="_blank">门市地址在哪里？</a></li>
-<li><a href="http://www.byts.com.cn/help/3/help545.html" title="能传真签合同吗？" target="_blank">能传真签合同吗？</a></li>
-<li><a href="http://www.byts.com.cn/help/3/help544.html" title="可以不签合同吗？" target="_blank">可以不签合同吗？</a></li>
- 
-                       
-                       
-                    </ul>
-                </div><div class="faq_container01">
-                    <span class="faq_class"><strong>旅游预订优惠政策</strong></span>
-                    <ul>
-                    
-                    
- <li><a href="http://www.byts.com.cn/help/4/help551.html" title="如何查看我的金币信息？" target="_blank">如何查看我的金币信息？</a></li>
-<li><a href="http://www.byts.com.cn/help/4/help550.html" title="如何使用金币？" target="_blank">如何使用金币？</a></li>
-<li><a href="http://www.byts.com.cn/help/4/help549.html" title="如何得到金币" target="_blank">如何得到金币</a></li>
-<li><a href="http://www.byts.com.cn/help/4/help548.html" title="什么是金币？" target="_blank">什么是金币？</a></li>
- 
-                       
-                       
-                    </ul>
-                </div><div class="faq_container01">
-                    <span class="faq_class"><strong>其他事项</strong></span>
-                    <ul>
-                    
-                    
- <li><a href="http://www.byts.com.cn/help/5/2016/0304/5402.html" title="&lt;font color='#FF6633'&gt;关于游客购物的重要提示&lt;/font&gt;" target="_blank"><font color="#FF6633">关于游客购物的重要提示</font></a></li>
-<li><a href="http://www.byts.com.cn/help/5/2012/0524/555.html" title="退款问题解答" target="_blank">退款问题解答</a></li>
-<li><a href="http://www.byts.com.cn/help/5/2012/0524/554.html" title="有旅游保险吗？保额多少？" target="_blank">有旅游保险吗？保额多少？</a></li>
-<li><a href="http://www.byts.com.cn/help/5/2012/0524/553.html" title="签证相关问题解答" target="_blank">签证相关问题解答</a></li>
- 
-                       
-                       
-                    </ul>
-                </div>
-
-          
           
                 <div class="faq_container06">
                     <span class="faq_class"><strong>关注我们的微博</strong></span>
@@ -594,14 +524,15 @@ window.onerror=function(){return true;}
 <script src="../assets/js/jquery-2.1.4.min.js"></script>
 <script>
 var ss=$("#zxc").val();
-var sr='';
 function days(dayid){
+   var sr='';
    $.get('sous',{"ss":ss,"dayid":dayid},function(msg){
+      sr+="<div class='Ny_search_showcon_midd'>"
       for(var s=0;s<msg.length;s++){
         sr+="<div class='Ny_search_showcon_middlist'>"
         sr+="<div class='Ny_search_showcon_midd_fl'>"
         sr+="<a href='#'>"
-        sr+="<img src='../image/one/shopphoto/'"+msg[s]['s_img']+" height='100px' width='125px'>"
+        sr+="<img src='"+msg[s]['s_img']+"' height='100px' width='125px'>"
         sr+="</a>"
         sr+="</div>" 
         sr+="<div class='Ny_search_showcon_midd_fr'>"
@@ -614,17 +545,19 @@ function days(dayid){
         sr+="<div class='clear'></div>"
         sr+="</div>"
       }
+      sr+="</div>"
       $("#replaces").html(sr)
     },'json')
 }
 
 function sous2(price){
+  var sr='';
   $.get('moneys',{"ss":ss,"price":price},function(msg){
       for(var f=0;f<msg.length;f++){
         sr+="<div class='Ny_search_showcon_middlist'>"
         sr+="<div class='Ny_search_showcon_midd_fl'>"
         sr+="<a href='#'>"
-        sr+="<img src='../image/one/shopphoto/'"+msg[f]['s_img']+" height='100px' width='125px'>"
+        sr+="<img src='"+msg[f]['s_img']+"' height='100px' width='125px'>"
         sr+="</a>"
         sr+="</div>" 
         sr+="<div class='Ny_search_showcon_midd_fr'>"

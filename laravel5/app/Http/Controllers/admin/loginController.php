@@ -19,7 +19,7 @@ class LoginController extends BaseController
     }
     public function loin(Request $request)
     {
-    	
+    	//接受登录信息
     	$u_name=$request->u_name;
     	$u_pwd=$request->u_pwd;
 		if (isset($u_name) && isset($u_pwd))

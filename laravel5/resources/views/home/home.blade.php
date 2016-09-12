@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" >
 <!-- saved from url=(0033)http://www.byts.com.cn/index.html -->
 <html xmlns="#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript" charset="utf-8" async="" src="../css/crmqq.php"></script>
-<script type="text/javascript" charset="utf-8" async="" src="../js/contains.js"></script>
-<script type="text/javascript" charset="utf-8" async="" src="../js/localStorage.js"></script>
-<script type="text/javascript" charset="utf-8" async="" src="../js/Panel.js"></script>
+<script type="text/javascript" charset="utf-8" async="" src="css/crmqq.php"></script>
+<script type="text/javascript" charset="utf-8" async="" src="js/contains.js"></script>
+<script type="text/javascript" charset="utf-8" async="" src="js/localStorage.js"></script>
+<script type="text/javascript" charset="utf-8" async="" src="js/Panel.js"></script>
 
 <title>惠完</title>
 
@@ -14,17 +14,17 @@
 <meta name="copyright" content="北京青年旅行社股份有限公司">
 <meta name="description" content="北京青年旅行社股份有限公司是实力雄厚的北京旅行社，经营国内旅游、出境旅游、入境旅游等业务。北京青旅网是北青旅总社指定的专业旅游网站。">
 <meta name="keywords" content="北京青旅,北青旅,旅游网,旅行社,国内旅游,出境旅游,北京旅游,北京周边游,休闲,会议,度假,自由人,签证,机票,出差,酒店,订房,在线预定,特色旅游,专题旅游,夕阳红旅游,红色旅游,北京青年旅行社">
-<link rel="stylesheet" href="../css/indexv2.css" type="text/css">
-<link href="../css/text.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="css/indexv2.css" type="text/css">
+<link href="css/text.css" type="text/css" rel="stylesheet">
 <meta name="360-site-verification" content="972c799d32fc710b7946ef9b0dbdd2fc">
 <meta name="chinaz-site-verification" content="081e7651-48c6-4c2f-a569-99321685eab1">
-<link href="../css/site.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="../js/jquery.jslides.js"></script>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/index.css">
-<script type="text/javascript" src="../js/188_min.js"> </script>
-<script type="text/javascript" src="../js/188_NewIndex.js"></script>
+<link href="css/site.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.jslides.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/index.css">
+<script type="text/javascript" src="js/188_min.js"> </script>
+<script type="text/javascript" src="js/188_NewIndex.js"></script>
 <script type="text/javascript"> 
 var intervalId = null; 
 function slideAd(id,nStayTime,sState,nMaxHth,nMinHth){ 
@@ -96,7 +96,7 @@ $(document).ready(function(){
 });
 
 
-</script><script language="javascript" type="text/javascript" src="../js/ajax188.js"></script><script language="javascript" type="text/javascript">
+</script><script language="javascript" type="text/javascript" src="js/ajax188.js"></script><script language="javascript" type="text/javascript">
 
 function Check_head_Login(){
       
@@ -119,11 +119,11 @@ function  myAddPanel(title,url,desc) {
 <!-- 
 window.onerror=function(){return true;} 
 // --> 
-</script><link rel="stylesheet" type="text/css" id="TQCSS0.5806006020866334" href="../css/style.css"><link rel="stylesheet" type="text/css" id="TQCSS0.20915199350565672" href="../css/style(1).css">
-<script id="TQJS0.899174741236493" src="../js/float.js"></script>
-<script id="TQJS0.09123087371699512" src="../js/invite.js"></script>
-<script id="TQJS0.8906257988419384" src="../js/minimess_core.js"></script><link rel="stylesheet" type="text/css" id="TQCSS0.6959054530598223" href="../css/style(2).css">
-<script charset="utf-8" async="" src="../js/i.js" id="_da"></script><script id="TQJS0.39637403981760144" src="../js/scriptonline.js"></script>
+</script><link rel="stylesheet" type="text/css" id="TQCSS0.5806006020866334" href="css/style.css"><link rel="stylesheet" type="text/css" id="TQCSS0.20915199350565672" href="css/style(1).css">
+<script id="TQJS0.899174741236493" src="js/float.js"></script>
+<script id="TQJS0.09123087371699512" src="js/invite.js"></script>
+<script id="TQJS0.8906257988419384" src="js/minimess_core.js"></script><link rel="stylesheet" type="text/css" id="TQCSS0.6959054530598223" href="css/style(2).css">
+<script charset="utf-8" async="" src="js/i.js" id="_da"></script><script id="TQJS0.39637403981760144" src="js/scriptonline.js"></script>
 <script id="TQJS0.9952801705803722" src="http://121.40.46.58:8000/sendmain.jsp?rand=31316931617776410&uin=9606641&comflag=981669443971972&nocache=0.12656454392708838&msg=APPLYFAIL_DISAGREE"></script></head>
 
 
@@ -203,8 +203,8 @@ window.onerror=function(){return true;}
 
 <div id="full-screen-slider" style="">
 	<ul id="slides">
-		<li style="z-index: 900; display: none; background: url(../home/images/1463390341.jpg) 50% 0% no-repeat;"><a href="http://www.byts.com.cn/line/ouzhou001/" target="_blank"></a></li>
-		<li style="z-index: 900; display: none; background: url(../home/images/1463134575.jpg) 50% 0% no-repeat;"><a href="http://www.byts.com.cn/line/beijiaerhu002/" target="_blank"></a></li>
+        <li style="z-index: 800; display: block; background: url(http://www.byts.com.cn/uploads/userup/0/1463390318.jpg) 50% 0% no-repeat;"><a href="http://www.byts.com.cn/line/ouzhou001/" target="_blank"></a></li>
+        <li style="z-index: 900; display: none; background: url(http://www.byts.com.cn/uploads/userup/0/1463134488.jpg) 50% 0% no-repeat;"><a href="http://www.byts.com.cn/line/xizang001/" target="_blank"></a></li>
         <li style="z-index: 800; display: block; background: url(http://www.byts.com.cn/uploads/userup/0/1463390318.jpg) 50% 0% no-repeat;"><a href="http://www.byts.com.cn/line/ouzhou001/" target="_blank"></a></li>
         <li style="z-index: 900; display: none; background: url(http://www.byts.com.cn/uploads/userup/0/1463134488.jpg) 50% 0% no-repeat;"><a href="http://www.byts.com.cn/line/xizang001/" target="_blank"></a></li>
 	</ul><ul id="pagination" style="margin-left: 330px;"><li class=""><a>1</a></li><li class=""><a>2</a></li><li class="current"><a>3</a></li><li class=""><a>4</a></li></ul>
@@ -232,11 +232,11 @@ window.onerror=function(){return true;}
 			         </div>
 			          <div class="leftBanner">
 			          	<a target="_blank" href="http://www.byts.com.cn/line/taiguo002/">
-			          	<img alt="畅游泰国" src="../home/images/1399530929.jpg"></a>
+			          	<img alt="畅游泰国" src="home/images/1399530929.jpg"></a>
 			          </div>
 				      <div class="leftBanner">
 				     		<a target="_blank" href="http://www.byts.com.cn/line/rihanchao001/">
-				     		<img alt="畅游韩国" src="../home/images/1399530990.jpg"></a>
+				     		<img alt="畅游韩国" src="home/images/1399530990.jpg"></a>
 				      </div>
 			          
 			      </div>
@@ -253,7 +253,7 @@ window.onerror=function(){return true;}
                           <li class="lineitem ">
                                 <div class="img fn-left">
 						            <a href="http://www.byts.com.cn/tours/4376.htm" target="_blank" title="普吉岛5晚7天**当地5星酒店5晚**">
-                                        <img width="118px" height="67px" data-original="../home/images/1410319228_2586.jpg" src="../home/images/1410319228_2586.jpg" alt="" style="display: inline;">
+                                        <img width="118px" height="67px" data-original="home/images/1410319228_2586.jpg" src="home/images/1410319228_2586.jpg" alt="" style="display: inline;">
                                     </a>
                                     <div class="prd-num">产品编号：4376</div>
 					            </div>
@@ -299,14 +299,14 @@ window.onerror=function(){return true;}
 @include('includes.foot')
 
 <!-- WPA Button Begin -->
-<script charset="utf-8" type="text/javascript" src="../css/wpa.php"></script>
+<script charset="utf-8" type="text/javascript" src="css/wpa.php"></script>
 <!-- WPA Button End -->
 <script language="JavaScript" src="js/floatcard"></script>
-<script src="../js/all_20100501.js"></script><script id="TQGetrequestUser_JS"></script>
-<script id="TQGetIsNewMsg_JS"></script><script src="../js/as.js"></script><object id="tq_as" name="tq_as" style="position:absolute;left:0px;top:-5px;" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1" height="1"><param name="movie" value="http://sysimages.tq.cn/js/vip/shareObject.swf"><param name="allowScriptAccess" value="always"><object id="tq_as2" name="tq_as2" style="position:absolute;left:0px;top:-5px;" type="application/x-shockwave-flash" data="http://sysimages.tq.cn/js/vip/shareObject.swf" width="1" height="1"><param name="allowScriptAccess" value="always"></object></object>
+<script src="js/all_20100501.js"></script><script id="TQGetrequestUser_JS"></script>
+<script id="TQGetIsNewMsg_JS"></script><script src="js/as.js"></script><object id="tq_as" name="tq_as" style="position:absolute;left:0px;top:-5px;" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1" height="1"><param name="movie" value="http://sysimages.tq.cn/js/vip/shareObject.swf"><param name="allowScriptAccess" value="always"><object id="tq_as2" name="tq_as2" style="position:absolute;left:0px;top:-5px;" type="application/x-shockwave-flash" data="http://sysimages.tq.cn/js/vip/shareObject.swf" width="1" height="1"><param name="allowScriptAccess" value="always"></object></object>
 
-        <script src="../js/jquery.lazyload.js" type="text/javascript"></script> 
-        <script type="text/javascript" src="../js/ScrollText.js"></script>
+        <script src="js/jquery.lazyload.js" type="text/javascript"></script> 
+        <script type="text/javascript" src="js/ScrollText.js"></script>
          <script type="text/javascript">
 		 
         $(function () {

@@ -74,11 +74,9 @@
             <p class="recommend-des">选择最中意的玩法，探索未知的精彩世界！</p>
 
             <div class="list-container">
-
                 <ul class="pro-list">
                     @foreach($res as $v)
                     <li>
-
                         <a href="http://www.tuniu.com/way/188645" target="_blank">
                             <div class="pro-img">
                                 <img src="{{$v->f_img}}" alt=""
@@ -107,11 +105,9 @@
                                 </div>
                             </div>
                         </a>
-
                     </li>
                     @endforeach
                 </ul>
-
             </div>
             <a href="javascript:;" class="pro-prev" id="pro-prev"></a>
             <a href="javascript:;" class="pro-next" id="pro-next"></a>

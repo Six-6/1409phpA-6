@@ -43,21 +43,5 @@ class Domestic extends Model
     };
     return $scenicArr;
 }
-	public function scenicSel($sid)
-	{
-		$s_id=explode(',',$sid);
-
-		$scenicArr=DB::table('scenic_spot')->wherein('s_id',$s_id)->get();
-		
-		return $scenicArr;
-	}
-
-	public function scenicSels($sid)
-	{
-
-		$scenicArr=DB::table('scenic_spot')->where('s_id',$sid)->first();
-		
-		return $scenicArr;
-	}
 
 }

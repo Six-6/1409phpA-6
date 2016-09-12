@@ -45,7 +45,7 @@ class RecursionController extends BaseController{
      */
     public function searchs(Request $request){
         $sou = $request->input('sous'); 
-        $sqlSel = DB::select("SELECT * FROM scenic_spot WHERE match(s_name) against('$sou')");
+        $sqlSel = DB::select("SELECT * FROM scenic_spot WHERE match(s_name,s_traffic) against('$sou')");
         $nums = count($sqlSel);
         if ($sqlSel) {
             return view('home.search',['souarr'=>$sqlSel,'count'=>$nums,'sou'=>$sou]);
@@ -60,7 +60,7 @@ class RecursionController extends BaseController{
     public function searchDay(){
         $traffic = Input::get('ss'); 
         $days = Input::get('dayid'); 
-        $sqlSel = DB::table('scenic')
+        $sqlSel = DB::table('scenic_spot')
             ->where(['s_day'=>$days,'s_name'=>$traffic])
             ->orwhere(['s_day'=>$days,'s_traffic'=>$traffic])
             ->get();
@@ -76,8 +76,9 @@ class RecursionController extends BaseController{
         $price = Input::get('price'); 
         $begin = $price[0];
         $ends = $price[1];
-        $sqlSel = DB::table('scenic')
-            ->whereBetween('s_sprice', [$begin, $ends])
+        $sqlSel = DB::table('scenic_spot')
+            ->where('s_name',$traffic)
+            ->whereBetween('s_sprice', [$begin,$ends])
             ->get();
         $nums = count($sqlSel);
         echo json_encode($sqlSel);

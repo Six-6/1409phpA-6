@@ -506,7 +506,7 @@ window.onerror=function(){return true;}
                   <img data-original="/uploads/image/hujie/hn/1433222734.jpg" src="{{$v->s_img}}" alt="2016年4-5月三亚自由行计划">
                 </a>
               </div>
-              <h3><a href="scenicDetails?sid={{$v->s_id}}" target="" title="2016年4-5月三亚自由行计划"><span class="f_f00">{{$v->s_discount}}</span>{{$v->s_name}}</a></h3>
+              <h3><a href="http://www.byts.com.cn/line/sanyaziyouren002/4556.htm" target="_blank" title="2016年4-5月三亚自由行计划"><span class="f_f00">{{$v->s_discount}}</span>{{$v->s_name}}</a></h3>
               <p class="short_infor">特色： {{$v->s_characteristic}}</p>
                           <p class="user_tinfor">
                                                     <span class="tours_num">编号：<em>{{$v->s_id}}</em></span>
@@ -538,7 +538,7 @@ window.onerror=function(){return true;}
           </div>
           
           @endforeach
-          <div id="divs"><div id="overlay"></div><button onclick="duibi()">对比</button></div>
+          <div id="divs"><div id="overlay"></div><button id="bu">对比</button></div>
             
 </div></div></div></div></div></div></body></html>
 <script src='../js/jquery.8.js'></script>
@@ -565,12 +565,13 @@ window.onerror=function(){return true;}
             id+=','+check[i].value;
             num++;
         }
-      } 
+      }
       if(num>=3)
       {
         alert('每次只能选两个对比噢!');
         return false;
       }
+      
     var ids=id.substr(1);
     $.get('contrast',{'sid':ids},function(msg){
      
@@ -581,15 +582,11 @@ window.onerror=function(){return true;}
           str+='<a href="http://www.byts.com.cn/line/==-/952.htm" target="_blank" title="最美三亚">'+msg[i]['s_name']+'</a><span class="c_price">¥'+msg[i]['s_sprice']+'</span>起</div><a class="delete hover" rel="nofollow" href="javascript:del_comp_item(1,952)" id="del_compare1">x</a>';
           str+='</li>';
         };
-        $("#overlay").html(str+'<input type="hidden" id="hi" value="'+ids+'"/>')
+        $("#overlay").html(str)
     },'json')
   }
-  function duibi()
-  {
-    var sid=$("#hi").val();
-    // $.get('contrasts',{'sid':sid},function(msg){
-    //     alert(msg)
-    // });
-    location.href='contrasts?sid='+sid;
-  }
+  $("#bu").click(function(){
+     // var sid=$("#hid").val();
+     alert(ids)
+  })
 </script>

@@ -1,9 +1,9 @@
 <!-- saved from url=(0033)http://www.byts.com.cn/index.html -->
 <html xmlns="#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript" charset="utf-8" async="" src="../css/crmqq.php"></script>
-<script type="text/javascript" charset="utf-8" async="" src="../js/contains.js"></script>
-<script type="text/javascript" charset="utf-8" async="" src="../js/localStorage.js"></script>
-<script type="text/javascript" charset="utf-8" async="" src="../js/Panel.js"></script>
+<script type="text/javascript" charset="utf-8" async="" src="css/crmqq.php"></script>
+<script type="text/javascript" charset="utf-8" async="" src="js/contains.js"></script>
+<script type="text/javascript" charset="utf-8" async="" src="js/localStorage.js"></script>
+<script type="text/javascript" charset="utf-8" async="" src="js/Panel.js"></script>
 
 <title>惠完</title>
 
@@ -13,17 +13,17 @@
 <meta name="copyright" content="北京青年旅行社股份有限公司">
 <meta name="description" content="北京青年旅行社股份有限公司是实力雄厚的北京旅行社，经营国内旅游、出境旅游、入境旅游等业务。北京青旅网是北青旅总社指定的专业旅游网站。">
 <meta name="keywords" content="北京青旅,北青旅,旅游网,旅行社,国内旅游,出境旅游,北京旅游,北京周边游,休闲,会议,度假,自由人,签证,机票,出差,酒店,订房,在线预定,特色旅游,专题旅游,夕阳红旅游,红色旅游,北京青年旅行社">
-<link rel="stylesheet" href="../css/indexv2.css" type="text/css">
-<link href="../css/text.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="css/indexv2.css" type="text/css">
+<link href="css/text.css" type="text/css" rel="stylesheet">
 <meta name="360-site-verification" content="972c799d32fc710b7946ef9b0dbdd2fc">
 <meta name="chinaz-site-verification" content="081e7651-48c6-4c2f-a569-99321685eab1">
-<link href="../css/site.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="../js/jquery.jslides.js"></script>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/index.css">
-<script type="text/javascript" src="../js/188_min.js"> </script>
-<script type="text/javascript" src="../js/188_NewIndex.js"></script>
+<link href="css/site.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.jslides.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/index.css">
+<script type="text/javascript" src="js/188_min.js"> </script>
+<script type="text/javascript" src="js/188_NewIndex.js"></script>
 <script type="text/javascript"> 
 var intervalId = null; 
 function slideAd(id,nStayTime,sState,nMaxHth,nMinHth){ 
@@ -95,7 +95,7 @@ $(document).ready(function(){
 });
 
 
-</script><script language="javascript" type="text/javascript" src="../js/ajax188.js"></script><script language="javascript" type="text/javascript">
+</script><script language="javascript" type="text/javascript" src="js/ajax188.js"></script><script language="javascript" type="text/javascript">
 
 function Check_head_Login(){
       
@@ -118,11 +118,11 @@ function  myAddPanel(title,url,desc) {
 <!-- 
 window.onerror=function(){return true;} 
 // --> 
-</script><link rel="stylesheet" type="text/css" id="TQCSS0.5806006020866334" href="../css/style.css"><link rel="stylesheet" type="text/css" id="TQCSS0.20915199350565672" href="../css/style(1).css">
-<script id="TQJS0.899174741236493" src="../js/float.js"></script>
-<script id="TQJS0.09123087371699512" src="../js/invite.js"></script>
-<script id="TQJS0.8906257988419384" src="../js/minimess_core.js"></script><link rel="stylesheet" type="text/css" id="TQCSS0.6959054530598223" href="../css/style(2).css">
-<script charset="utf-8" async="" src="../js/i.js" id="_da"></script><script id="TQJS0.39637403981760144" src="../js/scriptonline.js"></script>
+</script><link rel="stylesheet" type="text/css" id="TQCSS0.5806006020866334" href="css/style.css"><link rel="stylesheet" type="text/css" id="TQCSS0.20915199350565672" href="css/style(1).css">
+<script id="TQJS0.899174741236493" src="js/float.js"></script>
+<script id="TQJS0.09123087371699512" src="js/invite.js"></script>
+<script id="TQJS0.8906257988419384" src="js/minimess_core.js"></script><link rel="stylesheet" type="text/css" id="TQCSS0.6959054530598223" href="css/style(2).css">
+<script charset="utf-8" async="" src="js/i.js" id="_da"></script><script id="TQJS0.39637403981760144" src="js/scriptonline.js"></script>
 <script id="TQJS0.9952801705803722" src="http://121.40.46.58:8000/sendmain.jsp?rand=31316931617776410&uin=9606641&comflag=981669443971972&nocache=0.12656454392708838&msg=APPLYFAIL_DISAGREE"></script></head>
 
 
@@ -220,21 +220,21 @@ window.onerror=function(){return true;}
     @else
   <div class="conter"><span>欢迎光临 <a href="#">北京青年旅行社官网</a></span>　
   <span id="_Check_head_Login">
-        <span><a href="personAdd" target="_blank">{{Session::get('name')}}</a></span>
+        <span><a href="{{URL('home/personAdd')}}" target="_blank">{{Session::get('name')}}</a></span>
     <span>|</span>
-    <span><a href="personAdd" target="_blank" id="{{Session::get('u_id')}}">用户中心</a></span>
+    <span><a href="{{URL('home/personAdd')}}" target="_blank" id="{{Session::get('u_id')}}">用户中心</a></span>
     <span>|</span>
-    <span><a href="personDel" target="_blank" >退出</a></span>
+    <span><a href="{{URL('home/personDel')}}" target="_blank" >退出</a></span>
     @endif
 
 </span><script language="javascript">Check_head_Login();</script>
-     <div class="hour"><img src="../home/images/pic1.jpg" width="46" height="19"></div>
+     <div class="hour"><img src="home/images/pic1.jpg" width="46" height="19"></div>
      <div class="iph">旅游预订电话 <strong>400-926-5166</strong></div>
 </div>
 </div>
 <div class="top2">
 	<div class="conter">
-    	<div class="logo"><img src="../home/images/logo.png" width="329" height="54"><img src="../home/images/tage.png" width="116" height="50"></div>
+    	<div class="logo"><img src="home/images/logo.png" width="329" height="54"><img src="home/images/tage.png" width="116" height="50"></div>
     <div class="sourchNew"> 
     <!-- <form action="http://www.byts.com.cn/tags.php" method="post" name="indexsearchform" class="cfix" id="indexsearchform"> -->
 <input type="hidden" value="0" name="travelClassHeader" id="srhInput">
@@ -268,7 +268,7 @@ window.onerror=function(){return true;}
             <a href="http://www.byts.com.cn/youlun/">邮轮游</a>
             <a href="http://www.byts.com.cn/line/maerdaifu001/">马尔代夫</a>
         </div>
-      <form method="POST" action="searchs">
+      <form method="POST" action="{{URL('home/searchs')}}">
       <div class="a3">
         <input type="text" name="sous" placeholder="您想要查询的地名、公交" > 
         <input type="submit" value="查询">
@@ -277,7 +277,7 @@ window.onerror=function(){return true;}
       </form>
         <div class="clear"></div>
 
-<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="assets/js/jquery-2.1.4.min.js"></script>
 <script>
 /*  function sousuo(){
     var s=$("#sous").val();

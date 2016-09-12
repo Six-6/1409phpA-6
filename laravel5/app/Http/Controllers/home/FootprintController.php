@@ -40,13 +40,13 @@ class FootprintController extends BaseController{
         if ($flush) {
             echo "<script>alert('退出失败');location.href='personAdd'</script>";
         }else{
-            echo "<script>alert('退出成功');location.href='recursion'</script>";
+            echo "<script>location.href='".{{URL('/')}}."'</script>";
         }
     }
 
     /**
      * @用户收藏
-     *
+     *1
      * @return   [description]
      */
     public function yhCollect(){
