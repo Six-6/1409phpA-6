@@ -12,12 +12,11 @@
 	<div class="loginwarrp">
 		<div class="logo">管理员登陆</div>
         <div class="login_form">
-			<form id="Login" name="Login" method="post" onsubmit="return dl()" action="loin">
+			<!-- <form id="Login" name="Login" method="post" onsubmit="return dl()" > -->
                 <input type="hidden" name="_token" value="{{csrf_token()}}" />
-				<li class="login-item">
+				<li class="login-item" id="lis">
 					<span>用户名：</span>
-					<input type="text" onblur="names()" name="u_name" id='na' class="login_input">
-					
+                    <input type="text" onblur="names()" name="u_name" id='na' class="login_input">
 				</li>
 				<span id="sp"></span>
 				<li class="login-item">
@@ -28,9 +27,9 @@
 				<span id="sppwd"></span>
 				<div class="clearfix"></div>
 				<li class="login-sub">
-					<input type="submit" name="Submit" value="登录" />
+					<input type="button" onclick="dl()" name="Submit" value="登录" />
 				</li>                      
-           </form>
+           <!-- </form> -->
 		</div>
 	</div>
 </div>
@@ -43,19 +42,18 @@
         var name=$("#na").val();
         if(name=='')
         {
-            $("#sp").html('用户名不能为空');
+            $("#sp").html("<p style='color:red'>不能为空</p>");
             return false;
         }else
         {
             var r_name=/^[a-z]\w{5,17}$/i;
             if(!r_name.test(name))
             {
-                 $("#sp").html('用户名由6-18位的字母数字下划线组成，不能由数字开头');
+                 $("#sp").html("<p style='color:red'>用户名由6-18位的字母数字下划线组成，不能由数字开头</p>");
                  return false;
             }
             else
             {
-                $("#sp").html('可用');
                 return true;
             }
             
@@ -66,19 +64,18 @@
         var pwd=$("#pwd").val();
         if(pwd=='')
         {
-            $("#sppwd").html('密码不能为空');
+            $("#sppwd").html("<p style='color:red'>密码不能为空</p>");
             return false;
         }else
         {
             var r_pwd=/^\w{6,}$/;
             if(!r_pwd.test(pwd))
             {
-                 $("#sppwd").html('密码不能少于六位');
+                 $("#sppwd").html("<p style='color:red'>密码不能少于六位</p>");
                  return false;
             }
             else
             {
-                $("#sppwd").html('可用');
                 return true;
             }
             
@@ -88,10 +85,17 @@
     {
         if(names()&&pwds())
         {
-            return true;
-        }else
-        {
-            return false;
+            var name=$("#na").val();
+            var pwd=$("#pwd").val();
+            $.get('loin',{'name':name,'pwd':pwd},function(msg){
+                if(msg==1)
+                {
+                    location.href='in';
+                }else
+                {
+                    $("#sppwd").html("<p style='color:red'>用户名或密码错误</p>");
+                }
+            })
         }
     }
 </script>

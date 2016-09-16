@@ -46,7 +46,6 @@ Route::get('home/funShow',"home\FunController@show");/**志同道合页面显示
 
 
 
-Route::any('admin/lo', 'admin\loginController@index');//后台登录
 
 
 
@@ -125,7 +124,7 @@ Route::any('admin/lo', 'admin\loginController@index');//后台登录
 
 /**后台登录 权限控制**/
 Route::get('admin/lo', 'admin\loginController@index');/**后台登录**/
-Route::post('admin/loin', 'admin\loginController@loin');/**后台登录**/
+Route::get('admin/loin', 'admin\loginController@loin');/**后台登录**/
 Route::get('admin/unsession', 'admin\IndexController@unsession');/**退出**/                                                                                                           
 
 
@@ -164,8 +163,7 @@ Route::group(['middleware' => ['common']], function () {
 
 	/**后台 游记管理**/
 	Route::get('admins', 'admin\TravelnotesController@indexs');/**游记管理**/
-	Route::get('admin/season', 'admin\TravelnotesController@season');/**当季推荐**/
-	Route::post('admin/fileaddse', 'admin\TravelnotesController@fileadd');/**当季修改**/
+        
 	Route::get('admin/travelnotes', 'admin\TravelnotesController@index');/**游记管理2**/
 	Route::get('admin/travelsupdata', 'admin\TravelnotesController@updata');/**审核2**/
 	Route::get('admin/classics', 'admin\TravelnotesController@classics');/**经典回顾2**/
@@ -192,7 +190,7 @@ Route::group(['middleware' => ['common']], function () {
 });
 /**前台登录 退出 开始**/
 Route::get('blo','LoginController@index');/**前台登录**/
-Route::post('bloin','LoginController@bloin');/**前台登录**/
+Route::get('bloin','LoginController@bloin');/**前台登录**/
 Route::get('register','LoginController@register');/**前台注册**/
 Route::post('onregister','LoginController@onregister');/**前台注册**/
 
@@ -606,8 +604,10 @@ Route::get('home/lnews', 'season\NoteController@lnews');//前台最新发布
 
 Route::get('home/domestic','home\DomesticController@index');/**国内游展示**/
 Route::get('home/contrast','home\DomesticController@contrast');/**经典对比**/
-
-
+Route::get('home/contrasts','home\DomesticController@contrasts');/**景点对比**/
+Route::get('home/scenicDetails','home\DomesticController@scenicDetails');/**景点详情**/
+Route::get('home/fill','home\DomesticController@fill');/**填写订单**/ 
+// Route::get('home/fill_in_order','home\DomesticController@fill_in_order');/**展示填写订单表格**/  
 
 
 

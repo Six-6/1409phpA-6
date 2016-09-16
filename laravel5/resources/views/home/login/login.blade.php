@@ -238,7 +238,7 @@ window.onerror=function(){return true;}
 				var name=$("#username").val();
 				if(name=='')
 				{
-					$("#name_sp").html('用户名不能为空');
+					$("#name_sp").html("<p style=color:red>不能为空</p>");
 					return false;
 				}
 				else
@@ -248,11 +248,11 @@ window.onerror=function(){return true;}
           var phone = /^1[3|4|5|7|8]\d{9}$/;
 					if( r_name.test(name) || email.test(name) || phone.test(name) )
 					{
-						$("#name_sp").html('可用');
+						$("#name_sp").html(' ');
 						return true;
 					}else
 					{
-						$("#name_sp").html('用户名由6-18位的字母数字下划线组成，不能由数字开头');
+						$("#name_sp").html("<p style=color:red>用户名由6-18位的字母数字下划线组成，不能由数字开头</p>");
 						return false;
 					}
 
@@ -263,7 +263,7 @@ window.onerror=function(){return true;}
 				var pwd=$("#password").val();
 				if(pwd=='')
 				{
-					$("#pwd_sp").html('密码不能为空');
+					$("#pwd_sp").html("<p style=color:red>不能为空</p>");
 					return false;
 				}
 				else
@@ -271,11 +271,11 @@ window.onerror=function(){return true;}
 					var r_pwd=/^\w{6,}$/;
 					if(!r_pwd.test(pwd))
 					{
-						$("#pwd_sp").html('密码不能少于六位');
+						$("#pwd_sp").html("<p style=color:red>密码不能少于六位</p>"));
 						return false;
 					}else
 					{
-						$("#pwd_sp").html('可用');
+						$("#pwd_sp").html(' ');
 						return true;
 					}
 

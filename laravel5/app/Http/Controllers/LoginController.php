@@ -17,8 +17,9 @@ class LoginController extends Controller {
 	}
 	public function bloin(Request $request)
 	{
+        $token=$request->input('_token');
         $u_name=$request->username;
-        $u_pwd=$request->password;
+        $u_pwd=MD5($request->password);
         if (isset($u_name) && isset($u_pwd))
         {
             $name = trim($u_name);  //姓名清理空格
@@ -39,10 +40,10 @@ class LoginController extends Controller {
             if($res)
             {
                 Session::put('u_id',$res->u_id);
-                Session::put('name',$name);
-                return Redirect::to('/');
+                Session::put('user',$name);
+                echo 1;
             }else {
-                echo "<script>alert('用户名或密码错误,请从新登陆');location.href='lo'</script>";
+                echo 0;
             }   
         }
 	}
@@ -53,6 +54,7 @@ class LoginController extends Controller {
 	}
     public function onregister(Request $request)
     {
+        $token=$request->input('_token');
         $name=$request->name;
         $pwd=MD5($request->pwd);
         $email=$request->email;

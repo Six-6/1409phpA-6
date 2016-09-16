@@ -17,11 +17,17 @@ class CommonMiddleware{
      */
     public function handle($request, Closure $next){
         $u_id=Session::get('u_id');
+        if ($u_id=='') {
+            echo "<script>alert('请先登录')location.href='lo'</script>"; 
+            die;
+        }
         $res=DB::table('users')->where('u_id',$u_id)->lists('rid');
+    
         $arr=DB::table('r_p')
             ->join('power','r_p.pid','=','power.pid')
             ->where('r_p.rid',$res[0])
             ->lists("p_url");
+            // print_r($arr);die;
         $path=$request->path();
         if(in_array($path,$arr)){
             $name=Session::get("name");

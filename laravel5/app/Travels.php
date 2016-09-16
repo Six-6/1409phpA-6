@@ -12,7 +12,7 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 class Travels extends Model{
     /**
-     * »ñÈ¡±íÖÐËùÓÐÊý¾Ý
+     * ??È¡????????????
      */
 	/*protected $table = 'travels';
 	
@@ -23,15 +23,15 @@ class Travels extends Model{
 	//protected $dateFormat = 'U';
 	*/
 
-	/*ÆÀÂÛ²éÑ¯*/
+	/*???Û²?Ñ¯*/
 	public function falset($page)
 	{
-		$xia=($page-1)*15;					 //·ÖÒ³´ÓÄÄ¸öÏÂ±ê¿ªÊ¼
+		$xia=($page-1)*15;					 //??Ò³???Ä¸??Â±ê¿ªÊ¼
 		$count = DB::table('travels')->where('t_unwilling',1)->get();
 		$num = count($count);
-		$mexpage = ceil($num/15);			 //ÏòÉÏÈ¡Õû
-		$num = 15;							 //Ã¿Ò³ÌõÊý
-		//Êý¾Ý
+		$mexpage = ceil($num/15);			 //????È¡??
+		$num = 15;							 //Ã¿Ò³????
+		//????
 		$arr['data']=DB::table('travels')
             ->Join('login', 'travels.u_id', '=', 'login.u_id')
             ->Join('order', 'login.u_id', '=', 'order.u_id')
@@ -41,20 +41,20 @@ class Travels extends Model{
 			->take(15)
 			->get();
 		
-		$arr['page'] = $page;				 //µ±Ç°Ò³
-		$arr['mexpage'] = $mexpage;			 //×ÜÒ²Ò³Êý
+		$arr['page'] = $page;				 //??Ç°Ò³
+		$arr['mexpage'] = $mexpage;			 //??Ò²Ò³??
 		return	$arr;
 	}
 	
 	
 
-	/*ÉóºË²éÑ¯*/
+	/*???Ë²?Ñ¯*/
 	public function audits($page)
 	{
-		$xia=($page-1)*15;					//·ÖÒ³´ÓÄÄ¸öÏÂ±ê¿ªÊ¼
-		$count = DB::table('travels')->where('t_state',0)->get();//²éÑ¯ÓÐ¶àÉÙÊý¾Ý
+		$xia=($page-1)*15;					//??Ò³???Ä¸??Â±ê¿ªÊ¼
+		$count = DB::table('travels')->where('t_state',0)->get();//??Ñ¯?Ð¶???????
 		$num = count($count);
-		$mexpage = ceil($num/15);			//ÏòÉÏÈ¡Õû
+		$mexpage = ceil($num/15);			//????È¡??
 		$num = 15;
 		$arr['data']=DB::table('travels')
 				->Join('login', 'travels.u_id', '=', 'login.u_id')
@@ -68,23 +68,24 @@ class Travels extends Model{
 	}
 	
 
-	/*¾­µä»Ø¹Ë²éÑ¯*/
+	/*?????Ø¹Ë²?Ñ¯*/
 	public function classic($page)
 	{
 		$date = date('Y-m-d H:i:s',time());
-		$xia=($page-1)*15;					//·ÖÒ³´ÓÄÄ¸öÏÂ±ê¿ªÊ¼
-		$count = DB::table('travels')->where('t_state',1)->get();//²éÑ¯ÓÐ¶àÉÙÊý¾Ý
+		$xia=($page-1)*15;					//??Ò³???Ä¸??Â±ê¿ªÊ¼
+		$count = DB::table('travels')->where('t_state',1)->get();//??Ñ¯?Ð¶???????
 		$num = count($count);			
-		$mexpage = ceil($num/15);			//ÏòÉÏÈ¡Õû
+		$mexpage = ceil($num/15);			//????È¡??
 		$num = 15;
 		$arr['data']=DB::table('travels')
-				->Join('login', 'travels.u_id', '=', 'login.u_id')
+				->join('login', 'travels.u_id', '=', 'login.u_id')
 				->where('t_state',1)
 				->where('t_times','<',$date)
                 ->orderBy('t_hot','desc')
 				->skip($xia)
 				->take(15)
 				->get();
+		
 		$arr['page'] = $page;
 		$arr['mexpage'] = $mexpage;
 		return	$arr;
@@ -94,32 +95,32 @@ class Travels extends Model{
 	
 	public function del($id)
 	{
-		//Ö´ÐÐÉ¾³ý
+		//Ö´??É¾??
 		return DB::table('travels')->where('t_id',$id)->delete();
 	}
 	
 	public function updata($id)
 	{
-		//Ö´ÐÐÐÞ¸Ä
+		//Ö´???Þ¸?
 		return DB::table('travels')
             ->where('t_id',$id)
             ->update(['t_state' => 1]);
 	}
 	
 	/**
-    *ÓÎ¼Ç ¼Ó¾«
+    *?Î¼? ?Ó¾?
     * @return 
     */
 	public function essence($id)
 	{
-		//Ö´ÐÐÐÞ¸Ä
+		//Ö´???Þ¸?
 		return DB::table('travels')
             ->where('t_id',$id)
             ->update(['t_essence' => 1]);
 	}
 	
 	/**
-	*@µ±¼¾ÍÆ¼ö
+	*@?????Æ¼?
 	*/
 	public function season()
 	{

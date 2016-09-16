@@ -163,7 +163,7 @@ window.onerror=function(){return true;}
                   
 				  
                 </ul>
-                <form action="bloin" method="post" id="loginFrm" onsubmit="return dl()">
+                <!-- <form action="bloin" method="post" id="loginFrm" onsubmit="return dl()"> -->
                     <input type="hidden" id="hidden" name="_token" value="{{csrf_token()}}" />
 
 			    <input type="hidden" name="fmdo" value="login">
@@ -193,14 +193,10 @@ window.onerror=function(){return true;}
                                     
                                 </td>
                             </tr>
-                            <tr class="line_4">
-                                <th></th>
-                                <td class="cgrey2 line2"><input type="checkbox" tabindex="4" name="remember" id="rememberme" value="1"><label for="rememberme">保存登录信息两周内免登录</label></td>
-                            </tr>
                             <tr>
                                 <th class="line2"></th>
                                 <td class="line2">
-                                  <input type="image" id="bu" src="home/images/login-btn.png" tabindex="5" >
+                                  <input type="image" onclick="dl()" src="home/images/login-btn.png" tabindex="5" >
                               </td>
                             </tr>
                             <tr>
@@ -238,7 +234,7 @@ window.onerror=function(){return true;}
 				var name=$("#username").val();
 				if(name=='')
 				{
-					$("#name_sp").html('用户名不能为空');
+					$("#name_sp").html("<p style=color:red>不能为空</p>");
 					return false;
 				}
 				else
@@ -248,11 +244,11 @@ window.onerror=function(){return true;}
           var phone = /^1[3|4|5|7|8]\d{9}$/;
 					if( r_name.test(name) || email.test(name) || phone.test(name) )
 					{
-						$("#name_sp").html('可用');
+						$("#name_sp").html(' ');
 						return true;
 					}else
 					{
-						$("#name_sp").html('用户名由6-18位的字母数字下划线组成，不能由数字开头');
+						$("#name_sp").html("<p style=color:red>用户名由6-18位的字母数字下划线组成，不能由数字开头</p>");
 						return false;
 					}
 
@@ -263,7 +259,7 @@ window.onerror=function(){return true;}
 				var pwd=$("#password").val();
 				if(pwd=='')
 				{
-					$("#pwd_sp").html('密码不能为空');
+					$("#pwd_sp").html("<p style=color:red>密码不能为空</p>");
 					return false;
 				}
 				else
@@ -271,31 +267,33 @@ window.onerror=function(){return true;}
 					var r_pwd=/^\w{6,}$/;
 					if(!r_pwd.test(pwd))
 					{
-						$("#pwd_sp").html('密码不能少于六位');
+						$("#pwd_sp").html("<p style=color:red>密码不能少于六位</p>");
 						return false;
 					}else
 					{
-						$("#pwd_sp").html('可用');
+						$("#pwd_sp").html(' ');
 						return true;
 					}
-
 				}
 			}
 			function dl()
 			{
 				if(onname()&&onpwd())
 				{
-					return true;
-				}else
-				{
-					return false;
+            var name=$("#username").val();
+            var pwd=$("#password").val(); 
+            var token=$("#hidden").val();
+            $.get('bloin',{'username':name,'password':pwd,'_token':token},function(msg){
+              if(msg==1)
+              {
+                location.href='home/recursion';
+              }else
+              {
+                $("#pwd_sp").html("<p style=color:red>用户名或密码错误,不能登录</p>");
+              }
+            })
 				}
 			}
-     $("#bu").click(function(){
-        $.get('bloin',{},function(msg){
-          alert(msg)
-        })
-     })
 		</script>
         <script type="text/javascript" src="js/cycle_repeat_img.js"></script>
  

@@ -20,8 +20,8 @@ class LoginController extends BaseController
     public function loin(Request $request)
     {
     	//接受登录信息
-    	$u_name=$request->u_name;
-    	$u_pwd=$request->u_pwd;
+    	$u_name=$request->name;
+    	$u_pwd=$request->pwd;
 		if (isset($u_name) && isset($u_pwd))
 		{
 			$name = trim($u_name);  //姓名清理空格
@@ -36,9 +36,9 @@ class LoginController extends BaseController
 			if($res){
 				Session::put('u_id',$res->u_id);
 				Session::put('name',$name);
-				return Redirect::to('admin/in');
+				echo 1;
 			}else {
-				echo "<script>alert('用户名或密码错误,请从新登陆');location.href='lo'</script>";
+				echo 0;
 			}	
 		}
     }
