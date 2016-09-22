@@ -513,7 +513,6 @@ window.onerror=function(){return true;}
                                 <span class="user_satisfy">满意度：<em>100%</em></span><a id="recall_button_4556" rel="nofollow" href="javascript:void(0);" title="查看回访记录" class="user_num" onclick="show_recall(4556,4556)">&nbsp;0&nbsp;单点评▼</a>
                                     </p>
 <!--                        <div class="tuan_date"><p class="day_date">团期：--><!--</p><a href="--><!--/tours/--><!--" target="_blank" rel="nofollow">更多</a></div>-->
-                          <div class="tuan_date"><p class="day_date">团期：星期一,星期二,星期三,星期四,星期五,星期六,星期日</p><a id="plan_button_4556" class="cgrey" rel="nofollow" href="javascript:void(0)" onclick="javascript:popup_show2(&#39;4556&#39;);aid(&#39;4556&#39;)">查看团期▼</a></div>
                           <div id="site_plandate_4556" class="clearfix" style="display:none">
                             <div id="plan_date_4556" class="m-180"></div>
                           </div>

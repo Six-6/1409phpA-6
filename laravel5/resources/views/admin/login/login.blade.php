@@ -81,7 +81,7 @@
             
         }
     }
-    function dl( )
+    function dl()
     {
         if(names()&&pwds())
         {

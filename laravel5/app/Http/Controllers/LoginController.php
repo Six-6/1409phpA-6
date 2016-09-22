@@ -60,7 +60,7 @@ class LoginController extends Controller {
         $user=$request->user;
         $res=DB::table('login')->insertGetId(['name'=>$name,'pwd'=>$pwd,'user'=>$user,'email'=>$email,'phone'=>$phone]);
         if ($res) {
-           Session::put('id',$res);
+           Session::put('u_id',$res);
            Session::put('name',$name);
            echo "<script>alert('注册成功');location.href='blo'</script>";
         }else

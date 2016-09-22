@@ -183,9 +183,6 @@ window.onerror=function(){return true;}
         	<li class="last">{{$arr->s_name}}</li>
         </ul>
         <span class="pro_number">产品编号:<strong>{{$arr->s_id}}</strong></span>
-        	<li class="last">蜈支洲.西岛.呀诺达雨林.南山.南湾猴岛双飞5日**4晚海景房**</li>
-        </ul>
-        <span class="pro_number">产品编号:<strong>1715</strong></span>
 
     </div>          
                <div class="dtl_infobox">               
@@ -198,7 +195,6 @@ window.onerror=function(){return true;}
                     <div class="dtl_tit">
                    
                          <h1 class="dtl_tit_txt">{{$arr->s_name}}
-                         <h1 class="dtl_tit_txt">蜈支洲.西岛.呀诺达雨林.南山.南湾猴岛双飞5日**4晚海景房**
 						 <span class="icon-tag"></span>
                          </h1>
                          
@@ -1123,7 +1119,6 @@ window.onerror=function(){return true;}
                              <p>
 	                            
 	                             优惠价：     <strong>¥<em> {{$arr->s_sprice}}</em></strong>起 &nbsp;<em class="qijiashuoming">起价说明</em> 
-	                             优惠价：     <strong>¥<em> 2880</em></strong>起 &nbsp;<em class="qijiashuoming">起价说明</em> 
                              </p> 
                              
                              <p class="xh-youhui">
@@ -1144,7 +1139,7 @@ window.onerror=function(){return true;}
                              </p>
                              
                           <p>提前报名：建议提前3天以上报名</p>
-                              
+                              <p>温馨提示:七岁以下儿童完全免费,如若不是请自觉按照成人订购</p>
                               </div><!--txt1-->   
 
     <div class="play_date">
@@ -1190,250 +1185,6 @@ window.onerror=function(){return true;}
                        成人：￥2880 儿童：￥ 
         </option>
     </select>
-        </option> <option value="2016-09-21"> 
-                    2016-09-21（星期三）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-09-22"> 
-                    2016-09-22（星期四）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-09-23"> 
-                    2016-09-23（星期五）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-09-24"> 
-                    2016-09-24（星期六）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-09-25"> 
-                    2016-09-25（星期日）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-09-26"> 
-                    2016-09-26（星期一）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-09-27"> 
-                    2016-09-27（星期二）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-09-28"> 
-                    2016-09-28（星期三）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-09-29"> 
-                    2016-09-29（星期四）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-09-30"> 
-                    2016-09-30（星期五）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-01"> 
-                    2016-10-01（星期六）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-02"> 
-                    2016-10-02（星期日）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-03"> 
-                    2016-10-03（星期一）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-04"> 
-                    2016-10-04（星期二）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-05"> 
-                    2016-10-05（星期三）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-06"> 
-                    2016-10-06（星期四）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-07"> 
-                    2016-10-07（星期五）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-08"> 
-                    2016-10-08（星期六）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-09"> 
-                    2016-10-09（星期日）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-10"> 
-                    2016-10-10（星期一）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-11"> 
-                    2016-10-11（星期二）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-12"> 
-                    2016-10-12（星期三）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-13"> 
-                    2016-10-13（星期四）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-14"> 
-                    2016-10-14（星期五）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-15"> 
-                    2016-10-15（星期六）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-16"> 
-                    2016-10-16（星期日）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-17"> 
-                    2016-10-17（星期一）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-18"> 
-                    2016-10-18（星期二）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-19"> 
-                    2016-10-19（星期三）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-20"> 
-                    2016-10-20（星期四）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-21"> 
-                    2016-10-21（星期五）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-22"> 
-                    2016-10-22（星期六）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-23"> 
-                    2016-10-23（星期日）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-24"> 
-                    2016-10-24（星期一）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-25"> 
-                    2016-10-25（星期二）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-26"> 
-                    2016-10-26（星期三）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-27"> 
-                    2016-10-27（星期四）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-28"> 
-                    2016-10-28（星期五）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-29"> 
-                    2016-10-29（星期六）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-30"> 
-                    2016-10-30（星期日）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-10-31"> 
-                    2016-10-31（星期一）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-01"> 
-                    2016-11-01（星期二）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-02"> 
-                    2016-11-02（星期三）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-03"> 
-                    2016-11-03（星期四）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-04"> 
-                    2016-11-04（星期五）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-05"> 
-                    2016-11-05（星期六）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-06"> 
-                    2016-11-06（星期日）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-07"> 
-                    2016-11-07（星期一）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-08"> 
-                    2016-11-08（星期二）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-09"> 
-                    2016-11-09（星期三）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-10"> 
-                    2016-11-10（星期四）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-11"> 
-                    2016-11-11（星期五）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-12"> 
-                    2016-11-12（星期六）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-13"> 
-                    2016-11-13（星期日）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-14"> 
-                    2016-11-14（星期一）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-15"> 
-                    2016-11-15（星期二）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-16"> 
-                    2016-11-16（星期三）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-17"> 
-                    2016-11-17（星期四）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-18"> 
-                    2016-11-18（星期五）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-19"> 
-                    2016-11-19（星期六）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-20"> 
-                    2016-11-20（星期日）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-21"> 
-                    2016-11-21（星期一）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-22"> 
-                    2016-11-22（星期二）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-23"> 
-                    2016-11-23（星期三）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-24"> 
-                    2016-11-24（星期四）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-25"> 
-                    2016-11-25（星期五）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-26"> 
-                    2016-11-26（星期六）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-27"> 
-                    2016-11-27（星期日）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-28"> 
-                    2016-11-28（星期一）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-29"> 
-                    2016-11-29（星期二）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-11-30"> 
-                    2016-11-30（星期三）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-12-01"> 
-                    2016-12-01（星期四）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-12-02"> 
-                    2016-12-02（星期五）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-12-03"> 
-                    2016-12-03（星期六）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-12-04"> 
-                    2016-12-04（星期日）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-12-05"> 
-                    2016-12-05（星期一）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-12-06"> 
-                    2016-12-06（星期二）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-12-07"> 
-                    2016-12-07（星期三）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-12-08"> 
-                    2016-12-08（星期四）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-12-09"> 
-                    2016-12-09（星期五）  
-                       成人：￥2880 儿童：￥ 
-        </option> <option value="2016-12-10"> 
-                    2016-12-10（星期六）  
-                       成人：￥2880 儿童：￥ 
-        </option></select>
                     </p>
                   <div id="quickBooker1_tab2">
                         <table class="free_dtl_pro_tab"> 
@@ -1451,9 +1202,6 @@ window.onerror=function(){return true;}
                                     <input type="button" value="-" onclick="updateOperator('61423','miuns')" />
                                     <input seq="1" name="buyInfo.buyNum.product_61423" id="param61423" size="2" class="number prod-num" value="1" ordnum="ordNum" onchange="updateOperator('61423','input')" minamt="1" maxamt="100" textnum="textNum61423" people="2" branchid="61423" type="text">
         			            	<input type="button" value="+" onclick="updateOperator('61423','add')" />
-                                    <span class="minus" onclick="updateOperator('61423','miuns')"></span>
-                                    <input seq="1" name="buyInfo.buyNum.product_61423" id="param61423" size="2" class="number prod-num" value="1" ordnum="ordNum" onchange="updateOperator('61423','input')" minamt="1" maxamt="100" textnum="textNum61423" people="2" branchid="61423" type="text">
-                                    <span class="plus" onclick="updateOperator('61423','add')"></span>
         			             </td>
                              </tr> 
                         
@@ -1475,9 +1223,6 @@ b.身高1.5米以上儿童，按成人收费。
                                      <input type="button" value="-" onclick="updateOperator('87148','miuns')" />
                                     <input seq="1" name="buyInfo.buyNum.product_87148" id="param87148" size="2" class="number prod-num" value="0" ordnum="ordNum" onchange="updateOperator('87148','input')" minamt="0" maxamt="100" textnum="textNum87148" people="1" branchid="87148" type="text">
         			            	<input type="button" value="+" onclick="updateOperator('87148','add')" />
-        			                <span class="minus" onclick="updateOperator('87148','miuns')"></span>
-                                    <input seq="1" name="buyInfo.buyNum.product_87148" id="param87148" size="2" class="number prod-num" value="0" ordnum="ordNum" onchange="updateOperator('87148','input')" minamt="0" maxamt="100" textnum="textNum87148" people="1" branchid="87148" type="text">
-                                    <span class="plus" onclick="updateOperator('87148','add')"></span>
         			             </td>
                             </tr>             
     		            </tbody></table>
@@ -1486,7 +1231,6 @@ b.身高1.5米以上儿童，按成人收费。
                     <!--按钮--> 
 				<span class="bookerBtn">
 					<input class="immediateB" onclick="but()" id="but" value="开始预订" type="button">
-					<input class="immediateB" value="开始预订" type="button">
 				</span>
                    
 				   
@@ -1519,7 +1263,6 @@ b.身高1.5米以上儿童，按成人收费。
   
       </div>    
       
-
 	  <script src="../js/jquery1.8.js"></script>
 	  <script>
 	  // $("#but").click(function(){
@@ -1544,11 +1287,6 @@ b.身高1.5米以上儿童，按成人收费。
 	  </script>
 	   <div class="recomment_wra">
             <i class="arrow-bg"></i> 
-
-	  
-	   <div class="recomment_wra">
-            <i class="arrow-bg"></i>
-
             <div class="recomment_wra_mid">
                 <h3 class="recomment_tit"><i class="close" data-hide="recomment_wra"></i>发送行程到手机</h3>
                 <ul class="recomment_input">
@@ -2000,140 +1738,6 @@ b.身高1.5米以上儿童，按成人收费。
 	<!--warp end-->
 	    
 <div class="clear"></div>
-<div class="ufooter">
-    <div class="footer01">
-        <div class="newWarp">
-            <div class="foot_faq">
-            
-            <div class="faq_container01">
-                    <span class="faq_class"><strong>预订常见问题</strong></span>
-                    <ul>
-                    
-                    
- <li><a href="http://www.byts.com.cn/help/1/chunwan.htm" title="纯玩是什么意思？" target="_blank">纯玩是什么意思？</a></li>
-<li><a href="http://www.byts.com.cn/help/1/help538.html" title="单房差是什么？" target="_blank">单房差是什么？</a></li>
-<li><a href="http://www.byts.com.cn/help/1/help537.html" title="双飞、双卧都是什么意思？" target="_blank">双飞、双卧都是什么意思？</a></li>
-<li><a href="http://www.byts.com.cn/help/1/help536.html" title="满意度是怎么计算的？" target="_blank">满意度是怎么计算的？</a></li>
- 
-                       
-                       
-                    </ul>
-                </div><div class="faq_container01">
-                    <span class="faq_class"><strong>付款和发票</strong></span>
-                    <ul>
-                    
-                    
- <li><a href="http://www.byts.com.cn/help/2/help543.html" title="签约可以刷卡吗？" target="_blank">签约可以刷卡吗？</a></li>
-<li><a href="http://www.byts.com.cn/help/2/help542.html" title="付款方式有哪些？" target="_blank">付款方式有哪些？</a></li>
-<li><a href="http://www.byts.com.cn/help/2/help541.html" title="怎么网上支付？" target="_blank">怎么网上支付？</a></li>
-<li><a href="http://www.byts.com.cn/help/2/help540.html" title="如何获取发票？" target="_blank">如何获取发票？</a></li>
- 
-                       
-                       
-                    </ul>
-                </div><div class="faq_container01">
-                    <span class="faq_class"><strong>签署旅游合同</strong></span>
-                    <ul>
-                    
-                    
- <li><a href="http://www.byts.com.cn/help/3/help547.html" title="有旅游合同范本下载吗？" target="_blank">有旅游合同范本下载吗？</a></li>
-<li><a href="http://www.byts.com.cn/help/3/help546.html" title="门市地址在哪里？" target="_blank">门市地址在哪里？</a></li>
-<li><a href="http://www.byts.com.cn/help/3/help545.html" title="能传真签合同吗？" target="_blank">能传真签合同吗？</a></li>
-<li><a href="http://www.byts.com.cn/help/3/help544.html" title="可以不签合同吗？" target="_blank">可以不签合同吗？</a></li>
- 
-                       
-                       
-                    </ul>
-                </div><div class="faq_container01">
-                    <span class="faq_class"><strong>旅游预订优惠政策</strong></span>
-                    <ul>
-                    
-                    
- <li><a href="http://www.byts.com.cn/help/4/help551.html" title="如何查看我的金币信息？" target="_blank">如何查看我的金币信息？</a></li>
-<li><a href="http://www.byts.com.cn/help/4/help550.html" title="如何使用金币？" target="_blank">如何使用金币？</a></li>
-<li><a href="http://www.byts.com.cn/help/4/help549.html" title="如何得到金币" target="_blank">如何得到金币</a></li>
-<li><a href="http://www.byts.com.cn/help/4/help548.html" title="什么是金币？" target="_blank">什么是金币？</a></li>
- 
-                       
-                       
-                    </ul>
-                </div><div class="faq_container01">
-                    <span class="faq_class"><strong>其他事项</strong></span>
-                    <ul>
-                    
-                    
- <li><a href="http://www.byts.com.cn/help/5/2016/0304/5402.html" title="&lt;font color='#FF6633'&gt;关于游客购物的重要提示&lt;/font&gt;" target="_blank"><font color="#FF6633">关于游客购物的重要提示</font></a></li>
-<li><a href="http://www.byts.com.cn/help/5/2012/0524/555.html" title="退款问题解答" target="_blank">退款问题解答</a></li>
-<li><a href="http://www.byts.com.cn/help/5/2012/0524/554.html" title="有旅游保险吗？保额多少？" target="_blank">有旅游保险吗？保额多少？</a></li>
-<li><a href="http://www.byts.com.cn/help/5/2012/0524/553.html" title="签证相关问题解答" target="_blank">签证相关问题解答</a></li>
- 
-                       
-                       
-                    </ul>
-                </div>
-
-          
-          
-                <div class="faq_container06">
-                    <span class="faq_class"><strong>关注我们的微博</strong></span>
-                  <div class="interact_us">
-                  
-                    <ul class="interact_us clearfix">
-                        <li><span class="tn_weibo"><a target="_blank" href="http://www.weibo.com/"></a></span>
-                            <p><a target="_blank" href="http://www.weibo.com/">新浪微博</a></p>
-                        </li>
-                        <li><span class="tn_tencent"><a target="_blank" href="http://t.qq.com/ccsz8"></a></span>
-                            <p><a target="_blank" href="http://t.qq.com/ccsz8">腾讯微博</a></p>
-                        </li>
-                        <li id="wxpop"><span class="tn_weixin"><a rel="nofollow" href="javascript:void(0);"></a></span>
-                            <p><a href="javascript:void(0);">微信</a></p>
-                        </li>
-                    </ul>
-                </div>
-
-                </div>
-                <div class="clear">
-                </div>
-            </div>
-        </div>
-    </div>
-    
-<div class="foot-webtrust">
-    <a href="http://www.byts.com.cn/news/lvyouxinwen/2183.htm" rel="nofollow" target="_blank" title="国家4A级旅行社" class="trust1"></a>
-    <a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202005060700533" rel="nofollow" target="_blank" title="经营性ICP备案" class="trust2"></a>
-    <a href="https://ss.knet.cn/verifyseal.dll?sn=e14022111010546749hh13000000&amp;comefrom=trust&amp;trustKey=dn&amp;trustValue=www.byts.com.cn" target="_blank" rel="nofollow" title="可信网站认证" class="trust3"></a>
-    <a href="http://si.trustutn.org/info?sn=354140414002398002760" target="_blank" rel="nofollow" title="认证联盟实名认证" class="trust4"></a>
-    <a href="http://cats.org.cn/pinzhi/renzheng/1178" target="_blank" rel="nofollow" title="中国旅行社协会常务理事单位" class="trust5"></a>
-    <a href="http://www.byts.com.cn/byts2015.jpg" target="_blank" rel="nofollow" title="北京工商行政管理" class="trust6"></a>
-    <a href="http://www.anquan.org/authenticate/cert/?site=www.byts.com.cn&amp;at=realname" target="_blank" rel="nofollow" title="安全联盟实名认证" class="trust7"></a>
-</div>
-
-        <div class="foot-copyright">
-            <span>Copyright 1984-2014 http://www.byts.com.cn</span>
-            <span>京ICP证041363号</span>
-            <span>联系电话：<font class="red"> | </font></span>
-        </div>
-
-
-        <div class="foot-aboutlink">
-            <span><a href="http://www.byts.com.cn/">网站首页</a></span>
-            
-             <span><a target="_blank" href="http://www.byts.com.cn/about/3236.html">关于网上有许多自称北青旅官网的说明</a></span>
-<span><a target="_blank" href="http://www.byts.com.cn/about/562.html">商务合作</a></span>
-<span><a target="_blank" href="http://www.byts.com.cn/about/561.html">发展历程</a></span>
-<span><a target="_blank" href="http://www.byts.com.cn/about/560.html">网站招聘</a></span>
-<span><a target="_blank" href="http://www.byts.com.cn/about/559.html">用户协议</a></span>
-<span><a target="_blank" href="http://www.byts.com.cn/about/558.html">免责声明</a></span>
-<span><a target="_blank" href="http://www.byts.com.cn/about/557.html">联系我们</a></span>
-<span><a target="_blank" href="http://www.byts.com.cn/about/556.html">关于我们</a></span>
- 
-
-        </div>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5896591'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D5896591' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_5896591"><a href="http://www.cnzz.com/stat/website.php?web_id=5896591" target="_blank" title="站长统计">站长统计</a></span><script src="%E8%9C%88%E6%94%AF%E6%B4%B2.%E8%A5%BF%E5%B2%9B.%E5%91%80%E8%AF%BA%E8%BE%BE%E9%9B%A8%E6%9E%97.%E5%8D%97%E5%B1%B1.%E5%8D%97%E6%B9%BE%E7%8C%B4%E5%B2%9B%E5%8F%8C%E9%A3%9E5%E6%97%A5%204%E6%99%9A%E6%B5%B7%E6%99%AF%E6%88%BF%20_%E5%8C%97%E4%BA%AC%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%98%E7%BD%91_files/stat.php" type="text/javascript"></script><script src="%E8%9C%88%E6%94%AF%E6%B4%B2.%E8%A5%BF%E5%B2%9B.%E5%91%80%E8%AF%BA%E8%BE%BE%E9%9B%A8%E6%9E%97.%E5%8D%97%E5%B1%B1.%E5%8D%97%E6%B9%BE%E7%8C%B4%E5%B2%9B%E5%8F%8C%E9%A3%9E5%E6%97%A5%204%E6%99%9A%E6%B5%B7%E6%99%AF%E6%88%BF%20_%E5%8C%97%E4%BA%AC%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%98%E7%BD%91_files/core.php" charset="utf-8" type="text/javascript"></script>
-       
-       
-        
-    </div>
 
 <!-- WPA Button Begin -->
 <iframe style="display: block; position: fixed; z-index: 2147483646 ! important; left: auto; right: 8px; margin-left: 0px; top: 50%; bottom: auto; margin-top: -138px;" src="%E8%9C%88%E6%94%AF%E6%B4%B2.%E8%A5%BF%E5%B2%9B.%E5%91%80%E8%AF%BA%E8%BE%BE%E9%9B%A8%E6%9E%97.%E5%8D%97%E5%B1%B1.%E5%8D%97%E6%B9%BE%E7%8C%B4%E5%B2%9B%E5%8F%8C%E9%A3%9E5%E6%97%A5%204%E6%99%9A%E6%B5%B7%E6%99%AF%E6%88%BF%20_%E5%8C%97%E4%BA%AC%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%98%E7%BD%91_files/a.html" allowtransparency="true" scrolling="no" frameborder="0" height="277" width="121"></iframe><script charset="utf-8" type="text/javascript" src="%E8%9C%88%E6%94%AF%E6%B4%B2.%E8%A5%BF%E5%B2%9B.%E5%91%80%E8%AF%BA%E8%BE%BE%E9%9B%A8%E6%9E%97.%E5%8D%97%E5%B1%B1.%E5%8D%97%E6%B9%BE%E7%8C%B4%E5%B2%9B%E5%8F%8C%E9%A3%9E5%E6%97%A5%204%E6%99%9A%E6%B5%B7%E6%99%AF%E6%88%BF%20_%E5%8C%97%E4%BA%AC%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%98%E7%BD%91_files/wpa.php"></script>
@@ -2142,43 +1746,8 @@ b.身高1.5米以上儿童，按成人收费。
 
 
 <div class="right_scroll" style="right:178px; bottom: 221.5px; "><a class="add_scroll"></a><a class="comparison_btn compar_select" onclick="com_pro_click();" style=""></a><a class="backToTop"></a></div>
-<div class="compared_prod hide" style="left: 459.5px; display: none;">
-<div class="top_detail_bg clearfix">
-<a id="slideDown" class="top_detail" href="javascript:void(0);">
-对比中的产品(0/3)
-<b>▲</b>
-</a>
-<p class="top_notice" style="display:none">
-<span>对不起，您最多只可以添加三个产品，请先删除对比栏中的一些产品后再添加。</span>
-</p>
-</div>
-<ul class="com_prod_lists" style="display: none;">
-<li>
-<div class="add_more" id="item-empty0">
-<p>您还可以继续添加产品</p>
-</div>
-<a class="delete hover" href="javascript:void(0);" id="del_compare0">x</a>
-</li>
-<li>
-<div class="add_more" id="item-empty1">
-<p>您还可以继续添加产品</p>
-</div>
-<a class="delete hover" href="javascript:void(0);" id="del_compare1">x</a>
-</li>
-<li>
-<div class="add_more" id="item-empty2">
-<p>您还可以继续添加产品</p>
-</div>
-<a class="delete hover" href="javascript:void(0);" id="del_compare2">x</a>
-</li>
-<li class="last">
-<div class="cont_part">
-<a class="com_btn grey" href="javascript:void(0);" onclick="gotocontrast()" id="goto-contrast">开始对比</a>
-<a class="del_btn" href="javascript:del_all_compare()">清空</a>
-</div>
-</li>
-</ul>
-</div>
+
+
 
 
 <script type="text/javascript" src="../js/ob_free.js"></script>

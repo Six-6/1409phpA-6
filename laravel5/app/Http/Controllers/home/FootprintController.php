@@ -41,7 +41,7 @@ class FootprintController extends BaseController{
             echo "<script>alert('退出失败');location.href='personAdd'</script>";
         }else{
 
-            echo "<script>location.href='".{{URL('/')}}."'</script>";
+            echo "<script>location.href='".'/'."'</script>";
 
             return redirect('blo');
 

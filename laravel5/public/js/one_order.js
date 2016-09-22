@@ -15,8 +15,12 @@ $(function() {
                sumAll();		
 			   
 			   // 保险
-			   sumbx('ddl_nums_77935');
-			   sumbx('ddl_nums_77936');
+			   sumbx('spans');
+               var i= Number($("#txtHiddenPersonNum").val())+Number($("#txtHiddenChildNum").val());
+                $("#spans").html(i);
+                
+                $("#sps").html(i);
+			   // sumbx('ddl_nums_77936');
 			   																	  
 		});		
 	 
@@ -27,7 +31,7 @@ $(function() {
 			
 			if(getcr<1)
 			{
-			alert('错误，成人数必须大于等于1');	
+			// alert('错误，成人数必须大于等于1');	
 			$("#txtHiddenPersonNum").val("1");
 			}
 			else
@@ -37,8 +41,8 @@ $(function() {
 			 var getjiage= $("#getjiage").text()-$("#txtHiddenUzaiPrice").val();
 			 $("#getjiage").text(getjiage);
 			 sumAll();
-			 sumbxx('ddl_nums_77935');
-			 sumbxx('ddl_nums_77936');
+			 sumbx('spans');
+			 // sumbxx('ddl_nums_77936');
 			}
 			
                             //sumAll();																			  
@@ -56,8 +60,8 @@ $(function() {
 					   $("#getrtjiage").text(getrtjiage);
 				 }
 				 sumAll();
-				 sumbx('ddl_nums_77935');
-				  sumbx('ddl_nums_77936');
+				 sumbx('spans');
+				 //  sumbx('ddl_nums_77936');
 		});			
 	 
 	 
@@ -68,7 +72,7 @@ $(function() {
 			
 			if(getrt<0)
 			{
-			alert('错误，儿童数必须大于等于0');	
+			// alert('错误，儿童数必须大于等于0');	
 			$("#txtHiddenChildNum").val("0");
 			}
 			else
@@ -77,8 +81,8 @@ $(function() {
 			 var getrtjiage= $("#getrtjiage").text()-$("#txtHiddenChildPrice").val();
 			 $("#getrtjiage").text(getrtjiage);
 			 sumAll();
-			 sumbxx('ddl_nums_77935');
-			  sumbxx('ddl_nums_77936');
+			 sumbx('spans');
+			 //  sumbxx('ddl_nums_77936');
 			}
 			
 			
@@ -677,9 +681,13 @@ return Math.round(v*t)/t;
 function sumbx(dd)
 {
 	            var i= Number($("#txtHiddenPersonNum").val())+Number($("#txtHiddenChildNum").val());
-				var obj = document.getElementById(dd);
-                var op = new Option(i, i);
-				obj.options.add(op);
+                $("#spans").html(i);
+                
+                $("#sps").html(i);
+
+				// var obj = document.getElementById(dd);
+    //             var op = new Option(i, i);
+				// obj.options.add(op);
 				
 				//$("#"+dd).find("option[value="+i+"]").attr("selected", "true");
                 //obj.options.remove(2);
@@ -688,13 +696,13 @@ function sumbx(dd)
 }
 
 
-function sumbxx(dd)
-{
-	            var i= Number($("#txtHiddenPersonNum").val())+Number($("#txtHiddenChildNum").val())+1;
-				var obj = document.getElementById(dd);
-                //var op = new Option(i, i);
-				//obj.options.add(op);
-                obj.options.remove(i);
+// function sumbxx(dd)
+// {
+// 	            var i= Number($("#txtHiddenPersonNum").val())+Number($("#txtHiddenChildNum").val())+1;
+// 				var obj = document.getElementById(dd);
+//                 //var op = new Option(i, i);
+// 				//obj.options.add(op);
+//                 obj.options.remove(i);
 
            
-}
+// }

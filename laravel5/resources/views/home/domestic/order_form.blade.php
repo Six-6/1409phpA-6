@@ -184,12 +184,14 @@ window.onerror=function(){return true;}
                                     </tr>
                                     <tr>
                                         <td class="lt">
-                                            CHN455636                                        </td>
+                                            CHN{{$arr->s_id}}                                        </td>
                                        
                                        
                                         <td>
 <div class="fastCalender2" id="fastCalender2">
-<div class="p10"><span class="s10 pTimeSpan"><input class="pTime" value="2016-09-22 (星期四) 出发,2950元/成人, 元/儿童" style="color:#666666" id="pTime" type="text"></span>
+<div class="p10"><span class="s10 pTimeSpan">
+  <input class="pTime" value="2016-09-22 (星期四) 出发,2950元/成人, 元/儿童" style="color:#666666" id="pTime" type="text"></span>
+  
                      <div class="clearfix"></div>
                             <div class="s10Trim1 pDropCalender" style="z-index:999;">
                                 <div style="display: none;" class="calenderPart" id="calenderPart">
@@ -273,8 +275,8 @@ window.onerror=function(){return true;}
                                             <input id="txtHiddenDefaultOrderNums_77935" value="0" type="hidden">
                                             <input id="txtHiddenAddProductId_77935" value="17858" type="hidden">
                                             <input id="txtHiddenDateRange_77935" value="0" type="hidden">
-                                            
                                             --
+                                            
                                             
                                         </td>
                                         <td>
@@ -296,8 +298,7 @@ window.onerror=function(){return true;}
                                             <input id="txtHiddenAddProductSHAddtionCountId_77935" value="" type="hidden">
                                             <input id="txtHiddenAddProductSupplierNO_77935" value="" type="hidden">
                                             <input id="txtHiddenAddProductName_77935" value="旅行社责任保险15万元/人" name="txtHiddenAddProductName_77935" type="hidden">
-                                            <select id="ddl_nums_77935" style="min-width: 34px;" name="ddl_nums_77935">
-                                            <option selected="selected" value="0">0</option><option value="1">1</option></select>
+                                            <span id="spans">{{$nums}}</span>
                                         </td>
                                         <td>
                                             <b>￥</b><b id="td_total_77935">0</b>
@@ -314,88 +315,7 @@ window.onerror=function(){return true;}
                         </div>
                         
                         
-                        <div class="hd">
-                            单房差
-                            
-                        </div>
-                        <div class="bd" id="dd_travel_1">
-                            <table id="table_1" cellpadding="0" cellspacing="0" width="100%">
-                                <tbody>
-                                    <tr>
-                                        <th class="lt" width="25%">
-                                            名称
-                                        </th>
-                                        <th width="20%">
-                                            使用日期
-                                        </th>
-                                        <th width="10%">
-                                            价格
-                                        </th>
-                                        <th width="15%">
-                                            单位
-                                        </th>
-                                        <th width="15%">
-                                            份数
-                                        </th>
-                                        <th width="15%">
-                                            小计
-                                        </th>
-                                    </tr>
-                                    
-                                    <tr id="tr_77936">
-                                        <td class="lt">
-                                            
-                                          <span id="a_77936">单房差</span>
-                                            
-                                        </td>
-                                        <td>
-                                            <input id="txtHiddenIsFreeBaoxian_77936" value="0" type="hidden">
-                                            <input id="txtHiddenIsUserPersonType_77936" value="0" type="hidden">
-                                            <input id="txtHiddenValuationType_77936" value="1" type="hidden">
-                                            <input id="txtHiddenDefaultNums_77936" value="1" type="hidden">
-                                            <input id="txtHiddenDefaultOrderNums_77936" value="0" type="hidden">
-                                            <input id="txtHiddenAddProductId_77936" value="29156" type="hidden">
-                                            <input id="txtHiddenDateRange_77936" value="0" type="hidden">
-                                            
-                                            --
-                                            
-                                        </td>
-                                        <td>
-                                            
-                                            <input id="txtHiddenAddProductPdateEnable_77936" value="322965" type="hidden">
-                                            <input id="txtHiddenAddProductProfit_77936" name="txtHiddenAddProductProfit_77936" value="" type="hidden">
-                                            <b>￥</b><b id="td_price_77936">
-                                                                                            </b>
-                                            
-                                        </td>
-                                        <td>
-                                            <input id="hdunits_77936" value="人" type="hidden">
-                                            人
-                                        </td>
-                                        <td>
-                                            <input id="txtHiddenAddProductTypeId_77936" value="13" type="hidden">
-                                            <input id="txtHiddenAddProductIncludeEnable_77936" value="0" type="hidden">
-                                            <input id="txtHiddenAddProductSHAddtionPriceId_77936" value="" type="hidden">
-                                            <input id="txtHiddenAddProductSHAddtionCountId_77936" value="" type="hidden">
-                                            <input id="txtHiddenAddProductSupplierNO_77936" value="" type="hidden">
-                                            <input id="txtHiddenAddProductName_77936" value="单房差" name="txtHiddenAddProductName_77936" type="hidden">
-                                            <select id="ddl_nums_77936" style="min-width: 34px;" name="ddl_nums_77936">
-                                            <option selected="selected" value="0">0</option><option value="1">1</option></select>
-                                        </td>
-                                        <td>
-                                            <b>￥</b><b id="td_total_77936">0</b>
-                                        </td>
-                                    </tr>
-                                    <tr class="trhide">
-                                        <td colspan="6" style="text-align: left; color: #666; line-height: 22px;">
-                                            <p></p>
-                                        </td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
-                        </div>
-                        
+
                        
                         <!--优惠抵扣 START-->
                         <div class="hd hdTrim1" style="">
@@ -471,18 +391,25 @@ window.onerror=function(){return true;}
                                 <p class="p1">
                                     旅游团费</p>
                                 <p>
-                                    <b>￥<s id="getjiage">2950</s></b> <font id="getcr">1</font> 成人×￥<font id="gethidChenRen">2950</font>
+                                    <b>￥<s id="getjiage">{{$arr->s_sprice}}</s></b> <font id="getcr">{{$adult}}</font> 成人×￥<font id="gethidChenRen">{{$arr->s_sprice}}</font>
                                 </p>
                                 <p>
-                                    <b>￥<s id="getrtjiage">0</s></b><font id="getrt">0</font> 儿童×￥<font id="gethidErTong"></font></p>
+                                    <b>￥<s id="getrtjiage">0</s></b><font id="getrt">{{$children}}</font> 儿童×￥<font id="gethidErTong"></font></p>
+                            </li>
+                             <li class="li1">
+                                <p class="p1">
+                                    附加产品</p>
+                                <p>
+                                    <b><s id="getjiage"><span id="sps">{{$nums}}</span></s>×0￥</b> <font id="getcr">旅行社责任保险15万/人</font><font id="gethidChenRen"></font>
+                                </p>
                             </li>
                             <li style="display: none;" class="li2" id="AddPList"></li>
                             <li style="display: none;" class="li3" id="DeKouList"></li>
                         </ul>
                         <div class="li4">
                             <p>
-                                 <strong>应付总额：</strong><label>￥<i id="offerPrice">2950</i></label>
-								<input value="2950" id="allp" name="allp" type="hidden">
+                                 <strong>应付总额：</strong><label>￥<i id="offerPrice"></i></label>
+								<input value="{{$arr->s_sprice}}" id="allp" name="allp" type="hidden">
                             </p>
                         </div>
                     </div>
@@ -490,10 +417,11 @@ window.onerror=function(){return true;}
                 <div class="clearfix">
                 </div>
                 <div class="userInfoBtn" id="gl_return" style="display: block;">
-                    <input onclick="window.location.href='/line/sanyaziyouren002/4556.htm'" style="background: url(http://www.byts.com.cn/ORG7188_templets/002/images/order15.gif); border-width: 0px;
+                    <input onclick="javascript:history.go(-1) " style="background: url(http://www.byts.com.cn/ORG7188_templets/002/images/order15.gif); border-width: 0px;
                         cursor: pointer; width: 139px; height: 44px;" type="button">
-                    <input id="btn_Next" style="background: url(http://www.byts.com.cn/ORG7188_templets/002/images/order19.gif);
-                        border-width: 0px; cursor: pointer; width: 139px; height: 44px;" type="button">
+                    <input id="btn_Next" onclick="writes()"
+                     style="background: url(http://www.byts.com.cn/ORG7188_templets/002/images/order19.gif);
+                    border-width: 0px; cursor: pointer; width: 139px; height: 44px;" type="button">
                 </div>
                 <div class="clearfix">
                 </div>
@@ -504,7 +432,7 @@ window.onerror=function(){return true;}
             <input id="txtHiddenProductTotal" name="txtHiddenProductTotal" value="4556" type="hidden">
             <input id="txtHiddenNums" name="txtHiddenNums" value="1" type="hidden">
             <input id="txtHiddenGoDate" name="txtHiddenGoDate" value="2016-09-22" type="hidden">
-            <input id="txtHiddenUzaiPrice" name="txtHiddenUzaiPrice" value="2950" type="hidden">
+            <input id="txtHiddenUzaiPrice" name="txtHiddenUzaiPrice" value="{{$arr->s_sprice}}" type="hidden">
             <input id="txtHiddenChildPrice" name="txtHiddenChildPrice" value="" type="hidden">
             
             <input id="txtHiddenProcessType" name="txtHiddenProcessType" value="1" type="hidden">
@@ -526,12 +454,24 @@ window.onerror=function(){return true;}
         </div>
 
 <script src="../js/one_order.js" type="text/javascript"></script>
+<script src="../js/jquery1.8.js" type="text/javascript"></script>
+
     <script src="../js/jquery.js" type="text/javascript"></script>
 
     <script src="%E5%A1%AB%E5%86%99%E8%AE%A2%E5%8D%95_files/tooltip.html" type="text/javascript"></script>
 
     <script src="../js/order.js" type="text/javascript"></script>
-    
+    <script>
+      function writes()
+      {
+        var adult=$("#txtHiddenPersonNum").val();
+        var children=$("#txtHiddenChildNum").val();
+        var sprice=$("#offerPrice").html();
+        var s_sprice={{$arr->s_sprice}};
+        var s_id={{$arr->s_id}};
+        location.href='write_information?adult='+adult+'&children='+children+'&sprice='+sprice+'&s_sprice='+s_sprice+'&s_id='+s_id;       
+      }     
+    </script>
     <script language="javascript1.2">
 	
 	
