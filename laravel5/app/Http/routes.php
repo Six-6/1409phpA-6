@@ -75,8 +75,6 @@ Route::get('home/lnews', 'season\NoteController@lnews');//前台最新发布
 
 /**后台登录 权限控制**/
 Route::get('admin/lo', 'admin\loginController@index');/**后台登录**/
-
-
 Route::get('admin/loin', 'admin\loginController@loin');/**后台登录**/
 Route::get('admin/unsession', 'admin\IndexController@unsession');/**退出**/
 Route::group(['middleware' => ['common']], function () {

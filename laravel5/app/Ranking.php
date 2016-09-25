@@ -27,7 +27,7 @@ class Ranking extends Model{
 		$data['literature'] = DB::table('scenic_spot')
 			->Join('region', 'scenic_spot.r_id', '=', 'region.r_id')
 			->where('c_id',2)
-			->where('p_id',12)
+			->where('p_id',2)
 			->orderBy('s_degree', 'desc')
 			->limit(5,0)
 			->get();
@@ -127,7 +127,7 @@ class Ranking extends Model{
 		$urls="http://api.k780.com:88/?app=ip.get&appkey=19496&sign=3bcfe1b0d4fefae92b12139d33bf1828&format=json";
 	    $files=file_get_contents($urls);
 	    $jsons=json_decode($files,true);
-		//var_dump($jsons);die;
+//		var_dump($jsons);die;
 		//接取需要的ip位置
 		
 		$ip=$jsons['result']['att'];
@@ -137,7 +137,7 @@ class Ranking extends Model{
 		$c_id = DB::table('region')
 			->where('r_region',$ipname)
 			->get();
-			
+
 		$crd = json_decode(json_encode($c_id),true);
 		
 		/**一日游**/

@@ -24,16 +24,12 @@ class IndicatorController extends Controller {
 	 * 
 	 * @return void
 	 */
-	public function __construct()
-	{
-		$this->middleware('guest');
-	}
+
 	
 	public function siterecommend()
 	{
-
 		$model = new Siterecommend();					//调用model层
-		
+
 		$data = $model->seldata();				//调用查询方法
 		//print_r($data);die;
 		return view('home.auth',['data' => $data]);

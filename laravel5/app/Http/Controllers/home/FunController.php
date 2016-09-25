@@ -31,6 +31,7 @@ class FunController extends BaseController
      */
     public function show()
     {
+
         $re = Fun::selAll();
         //print_r($re);die;
         foreach ($re as $k => $v) {
@@ -44,6 +45,13 @@ class FunController extends BaseController
      */
     public function lists(Request $request)
     {
+        $u_id = Session::get('u_id');
+        if(empty($u_id))
+        {
+            $url = $_SERVER['HTTP_REFERER'];
+            Session::put('url',$url);
+            return redirect('blo');
+        }
         //$uid = 1;
         $u_id=Session::get("u_id");
        // $name = "23454";

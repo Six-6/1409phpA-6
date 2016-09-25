@@ -17,21 +17,9 @@
 <body>
 <script type="text/javascript" src="../js/in-min.js"></script><script type="text/javascript" src="../js/header_v2.js"></script><script type="text/javascript" src="../js/getDegree.js"></script><script type="text/javascript" src="../js/screen_size.js"></script><link rel="stylesheet" href="../css/index_nav_menu.css"><link rel="stylesheet" type="text/css" href="../css/TN_date.css"><script type="text/javascript" src="../js/search_ajax.js"></script><link href="./css/head_nav_new.css" rel="stylesheet" type="text/css"><script type="text/javascript">function selectTag(showContent,selfObj){ var tag = document.getElementById("tags").getElementsByTagName("li"); var taglength = tag.length; for(i=0; i<taglength; i++){ tag[i].className = ""; } selfObj.parentNode.className = "selectTag"; for(i=1; j=document.getElementById("tagContent"+i); i++){ j.style.display = "none"; } document.getElementById(showContent).style.display = "block";}var startCity = document.getElementById("startCity");if(startCity){ startCity.onmouseover = function(){ startCity.className = "head_start_city change_tab"; }; startCity.onmouseout = function(){ startCity.className = "head_start_city"; };}function getCookie(objName){ var arrStr = document.cookie.split("; "); for(var i = 0;i < arrStr.length;i ++){ var temp = arrStr[i].split("="); if(temp[0] == objName) return unescape(temp[1]); } return false;}var tuniuPPhoneDiv = document.getElementById("tuniu_400_num_phone");var tuniuPPhoneNumber = getCookie("p_phone_400");if (tuniuPPhoneDiv) { if (tuniuPPhoneNumber) { tuniuPPhoneDiv.innerHTML = tuniuPPhoneNumber; } else { tuniuPPhoneDiv.innerHTML = "4007-999-999"; }}$(function($) { var sub = $("#keyword-input-sub").val(); if(sub && sub != ''){ $("#keyword-input").val(sub); }});</script><!-- 页面类型 -->
 <input name="page_type" id="page_type" value="130000" type="hidden">
-
+@include('includes.authLogin')
     <!--start 面包屑和目的地导航 -->
-        <div class="top_area">
-            <div class="wrap clearfix" style="background:#fff;">
-                <div class="crumbs fl">
-                    <a href="siterecommend" class="word" rel="nofollow">攻略首页</a>
 
-                    <a href="note" target="_blank" rel="nofollow" class="word">游记</a>
-                    <a href="http://www.tuniu.com/way/" target="_blank" rel="nofollow" class="word">达人玩法</a>
-                    <a href="ranking" rel="nofollow" class="word cur">风向标</a>
-                    <a href="http://www.tuniu.com/traveler" target="_blank" rel="nofollow" class="word">旅游达人</a>
-                    <a href="http://ask.tuniu.com/" target="_blank" rel="nofollow" class="word">攻略问答</a>
-                </div>
-            </div>
-        </div>
 
 <div class="wrapmain">
 		<div class="nav-ind">
@@ -43,9 +31,7 @@
                                 
 				
 				<a href="{{URL('home/themes')}}" class="indsep selected" id="theme"><div class="theme">主题推荐</div></a>
-				<a href="http://top.tuniu.com/notes/" class="indsep" id="intour">
-                    <p class="inactive"></p>
-                    <div class="intour">人在旅途</div></a>
+
 			</div>
 		</div>
 
@@ -72,14 +58,12 @@
             <div class="filter_innerbox">
                 <div id="J_FilterItems" class="pkg_filter_item clearfix">
                 	                    <dl>
-	                    <dt class=".pkg_filter_tit">人群</dt>
+
 	                    <dd class="pkg_filter_properties J_properties01">
-	                        <div class="pkg_filter_buxian all_01">
-	                            <a href="{{URL('home/themes')}}" rel="nofollow" >不限</a>
-	                        </div>
+
 	                        <div class="pkg_filter_others">
 	                            <div class="fenlei01 all_02">
-									<a href="{{URL('home/themes')}}" rel="nofollow" class="a1 ">权威</a>     		                        
+									<a href="{{URL('home/themes')}}" rel="nofollow" class="a1 ">权威</a>
 									<a href="{{URL('home/freshs')}}" rel="nofollow" class="a1 ">尝鲜</a>     		                        
                                 	<a href="{{URL('home/shutter')}}" rel="nofollow" class="a1 ">快门</a>     		                        
 									<a href="{{URL('home/cate')}}" rel="nofollow" class="a1 ">美食</a>     		                        

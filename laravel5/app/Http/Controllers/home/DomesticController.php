@@ -10,6 +10,7 @@ header('content-type:text/html;charset=utf-8');
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use App\Domestic;
+use Session,DB,Input,Redirect;
 class DomesticController extends BaseController
 {
     /**
@@ -18,18 +19,17 @@ class DomesticController extends BaseController
      **/
     public function index(Request $request)
     {
-
-        $rid = $request->rid;
+        $rid=$request->rid;
 
         //调用model层
 
+        $model = new Domestic();
 
-		$model = new Domestic();
-        $Model = new Recursion();
-        $regionArr = $model->regionSelect(1);
-        $scenicArr = $model->scenicSelect($regionArr);
-        $domestic = $Model->domestic();
-        return view('home/domestic/domestic_list',['arr'=>$regionArr,'scenicArrs'=>$scenicArr,'domestic'=>$domestic]);
+        $regionArr=$model->regionSelect(1);
+
+        $scenicArr=$model->scenicSelect($regionArr);
+
+        return view('home/domestic/domestic_list',['arr'=>$regionArr,'scenicArrs'=>$scenicArr]);
 
     }
 
@@ -190,7 +190,7 @@ class DomesticController extends BaseController
 
                 //判断相同订单的时间是否冲突
                 if ($times - $newTime < $newDays->s_day * 24 * 3600) {
-                    echo 1;
+                    echo "<script>alert('您已经下过单了，为避免给您造成损失，请谨慎重复下单');location.href='ordersAdd'</script>";
 
                 } else {
                     //判断用户取得这个景点发表时间是否超过一个月,没超过一个月就给用户的尝鲜人字段加一

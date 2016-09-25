@@ -156,7 +156,7 @@ li{ list-style-type:none}
 }
 .dh .conter .a3 a{font-size: 14px; display:inline-block; padding:0 8px}
 .dh .conter .a3 a:hover{ background-color:#ffffff; color:#178872}
-.dhnew{ width:234px; height:410px; background-color:#FFF; position:absolute; z-index:111111; left:9px; top:49px; border-top:2px solid #178872}
+.dhnew{ width:234px; height:auto; background-color:#FFF; position:absolute; z-index:111111; left:9px; top:49px; border-top:2px solid #178872}
 
 
 
@@ -171,7 +171,7 @@ li{ list-style-type:none}
 .dha ul li{
 	width: 234px;
 	position: relative;
-	height: 70px;
+	height: 80px;
 	background-image: url(../image/1.png);
 	background-repeat: no-repeat;
 	background-position: 9px center;line-height: 24px; cursor:pointer

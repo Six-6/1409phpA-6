@@ -30,7 +30,6 @@
                     <th style="width:10%">商品类型</th>
                     <th style="width:10%">操作</th>
                 </tr>
-                @foreach($re as $v)
                 @foreach($data['data'] as $v)
                     <tr>
                         <td><input type="checkbox"></td>

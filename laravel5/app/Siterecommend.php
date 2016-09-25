@@ -11,21 +11,7 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 class Siterecommend extends Model{
-    /**
-     * 获取表中所有数据
-     */
-	/*protected $table = 'travels';
-	
-	protected $primaryKey = 't_id';
-	
-	public $timestamps = false;
-	
-	//protected $dateFormat = 'U';
-	*/
 
-	/**
-	*@当季玩什么 我玩我风格 月度推荐
-	*/
 	public function seldata()
 	{
 		//当季玩什么
@@ -49,7 +35,7 @@ class Siterecommend extends Model{
 			$delsr = DB::table('order')->where('u_id',$value)->get();
 			$num[$value] = count($delsr);
 		}
-		
+
 		//查询下单数超过五个的用户
 		foreach($num as $key => $value)
 		{

@@ -29,7 +29,15 @@ class WayController extends Controller
 		$types = $this->Cate($tables,0,0);
         return view('admin.types',['arr' => $types]);
 	}
-
+    /*
+         * 添加展示
+         * @return
+         */
+    public function wayadd()
+    {
+        $tables = DB::table('region')->get();
+        return view('admin.article_add', ['arr' => $tables]);
+    }
     /*
      *旅游景点修改
      * @return

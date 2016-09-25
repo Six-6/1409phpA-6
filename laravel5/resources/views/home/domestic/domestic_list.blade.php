@@ -2,7 +2,7 @@
 <!-- saved from url=(0029)http://www.byts.com.cn/china/ -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>国内旅游 北京青旅_北青旅总社官网北京旅行社</title>
+<title>国内旅游 惠玩旅行社官网</title>
 <meta name="keywords" content="国内旅游,中国旅游,华夏旅游">
 <meta name="description" content="北青旅国内部专业提供各种国内自由行，包团，跟团旅游">
 <link rel="stylesheet" href="http://www.byts.com.cn/ORG7188_templets/002/style/style.css">
@@ -89,52 +89,13 @@ function  myAddPanel(title,url,desc) {
 <!-- 
 window.onerror=function(){return true;} 
 // --> 
-</script> 
+</script>
 
-<div class="top1">
-  <div class="conter"><span>欢迎访问 <a href="http://www.byts.com.cn/">北京青年旅行社官网</a></span>　请
-  <span id="_Check_head_Login"><a href="http://www.byts.com.cn/users/">欢迎您，weisen</a> <a href="http://www.byts.com.cn/users/order.php?po=all"> [订单]</a> <a href="http://www.byts.com.cn/users/index.php?do=edt"> [资料]</a><a href="http://www.byts.com.cn/users/index.php?do=money"> [积分]</a> <a href="http://www.byts.com.cn/users/index_do.php?fmdo=login&dopost=exit"> [退出]</a>
-</span><script language="javascript">Check_head_Login();</script>
-     <div class="hour"><img src="../home/user/pic1.jpg" width="46" height="19"></div>
-     <div class="iph">旅游预订电话 <strong>400-926-5166</strong></div>
-  </div>
-</div>
-<div class="top2">
-    <div class="conter">
-        <div class="logo"><img src="../home/user/logo.png" width="329" height="54"><img src="../home/user/tage.png" width="116" height="50"></div>
-    <div class="sourchNew"> 
-    <form action="http://www.byts.com.cn/tags.php" method="post" name="indexsearchform" class="cfix" id="indexsearchform">
-    <input type="hidden" value="0" name="travelClassHeader" id="srhInput">
-        <div class="select_box"><input id="myselect" type="text" value="全部" readonly="readonly">
-        <ul class="select_ul" tyle="z-index: 10000; display: none;">
-        <li> <a href="javascript:void(0)">全部</a></li>
-            <li><a val="4" href="javascript:void(0)">旅游线路</a></li>
-            <li><a val="5" href="javascript:void(0)">酒店预定</a></li>
-            <li> <a val="8" href="javascript:void(0)">签证办理</a></li>
-            <li><a val="9" href="javascript:void(0)">旅游租车</a></li>
-            <li><a val="10" href="javascript:void(0)">旅游门票</a></li>
-      
-        </ul>
-   <div class="select_text"><input id="search" autocomplete="off" maxlength="18" type="text" value="请输入关键字" onclick="javascript:document.getElementById(&#39;search&#39;).value=&#39;&#39;;" name="searchkey"></div>
-   <input type="submit" class="select_seach" name=""> 
-  </div>
-  </form>
-  </div>  
-  
-    </div>
-</div>
+@include('includes.searchtop')
 <div class="dh">
     <div class="conter">
       <div class="a1"><a href="">所有目的地分类</a></div>
-      <div class="a2">
-            <a href="{{URL('/')}}">首页</a>
-            <a href="{{URL('home/beijing')}}">本地游</a>
-            <a href="{{URL('home/domestic')}}">国内游</a>
-            <a href="{{URL('home/exit')}}">出境游</a>
-            <a href="{{URL('home/siterecommend')}}">风向标</a>
-            <a href="{{URL('home/note')}}">游记</a>
-            <a href="{{URL('home/funWrite')}}">志同道合</a>
-        </div>
+        @include('includes.dao')
         <div class="clear"></div>
         
   </div>
@@ -277,30 +238,30 @@ window.onerror=function(){return true;}
 <!--start right-->
     <div class="w800 fr" id="niuren_list">
       <!--start top_tour-->
-      <div class="top_tour mb_20 clearfix">
-                <div class="top_pro">
-                  <ul class="clearfix">
-                    @foreach($domestic as $k=>$v)
-                    <li class="t_item">
-                      <div class="t_wrap">
-                        <span class="cu_icon">强烈推荐</span>
-                        <a href="{{URL('home/scenicDetails')}}?sid={{ $v->s_id }}" target="_blank">
-                          <img src="../home/images/{{ $v->s_img }}" width="178" height="134" alt="{{ $v->s_name }}">
-                        </a>
-                      </div>
-                      <p class="t_title">
-                        <a class="f_4e9700" href="{{URL('home/scenicDetails')}}?sid={{ $v->s_id }}" target="_blank">
-                          <span class="f_0053aa"></span>{{ $v->s_name }}
-                        </a>
-                      </p>
-                      <div class="t_price">
-                        <span class="fl"><em class="f18">{{ $v->s_sprice }}</em>元起</span>
-                        <div class="tour_sale pt_8"><span class="dm"><em></em></span><span class="dj"><em></em></span></div>
-                      </div>
-                    </li>
-                    @endforeach
-                  </ul>
-                </div>        <!--start nr_special-->
+      {{--<div class="top_tour mb_20 clearfix">--}}
+                {{--<div class="top_pro">--}}
+                  {{--<ul class="clearfix">--}}
+                    {{--@foreach($domestic as $k=>$v)--}}
+                    {{--<li class="t_item">--}}
+                      {{--<div class="t_wrap">--}}
+                        {{--<span class="cu_icon">强烈推荐</span>--}}
+                        {{--<a href="{{URL('home/scenicDetails')}}?sid={{ $v->s_id }}" target="_blank">--}}
+                          {{--<img src="../home/images/{{ $v->s_img }}" width="178" height="134" alt="{{ $v->s_name }}">--}}
+                        {{--</a>--}}
+                      {{--</div>--}}
+                      {{--<p class="t_title">--}}
+                        {{--<a class="f_4e9700" href="{{URL('home/scenicDetails')}}?sid={{ $v->s_id }}" target="_blank">--}}
+                          {{--<span class="f_0053aa"></span>{{ $v->s_name }}--}}
+                        {{--</a>--}}
+                      {{--</p>--}}
+                      {{--<div class="t_price">--}}
+                        {{--<span class="fl"><em class="f18">{{ $v->s_sprice }}</em>元起</span>--}}
+                        {{--<div class="tour_sale pt_8"><span class="dm"><em></em></span><span class="dj"><em></em></span></div>--}}
+                      {{--</div>--}}
+                    {{--</li>--}}
+                    {{--@endforeach--}}
+                  {{--</ul>--}}
+                {{--</div>        <!--start nr_special-->--}}
         <div class="nr_special">
           <div class="satisf">
             <dl>
@@ -329,7 +290,7 @@ window.onerror=function(){return true;}
           
         </div>
         <!--end nr_special-->
-      </div>
+      {{--</div>--}}
       <!--end top_tour-->
       <!--start filter_head-->
         <div class="filter_head">
@@ -469,14 +430,14 @@ window.onerror=function(){return true;}
       <h3 class="list_title"><span>{{$val[0]->r_region}}</span> <a href="http://www.byts.com.cn/line/hainan001">更多&gt;&gt;&gt;</a></h3>
           <div class="list_cont">
                                          
-                                         
+
                 <ul class="list_view">
                 
                     @foreach($val as $v)
                  <li class="list_item">
               <div class="photo">
-                <a href="http://www.byts.com.cn/line/sanyaziyouren002/4556.htm" target="_blank">
-                  <img data-original="/uploads/image/hujie/hn/1433222734.jpg" src="{{$v->s_img}}" alt="2016年4-5月三亚自由行计划">
+                <a href="">
+                  <img data-original="/uploads/image/hujie/hn/1433222734.jpg" src="../home/images/{{$v->s_img}}" alt="2016年4-5月三亚自由行计划">
                 </a>
               </div>
               <h3><a href="scenicDetails?sid={{$v->s_id}}" target="" title="2016年4-5月三亚自由行计划"><span class="f_f00">{{$v->s_discount}}</span>{{$v->s_name}}</a></h3>

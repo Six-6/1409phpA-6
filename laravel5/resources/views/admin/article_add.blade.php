@@ -61,7 +61,7 @@
 	<input class="form-input-txt" type="button" name="username" id="username" value="{{Session::get('username')}}" />
 </div> -->
 				<div class="form-group">
-					<label for="">图</label>
+					<label for="">图片</label>
     				<input type="hidden" name="_token" value="{{csrf_token()}}" />
 					<div class="file"><input type="file" name="file" id="file" />选择文件</div>
 					<!-- <div class="file"><input type="submit" class="form-input-file"/>上传</div> -->

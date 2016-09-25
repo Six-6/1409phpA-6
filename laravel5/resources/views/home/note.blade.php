@@ -34,6 +34,7 @@ function selectTag(showContent,selfObj){ var tag = document.getElementById("tags
 <link rel="stylesheet" type="text/css" href="../css/slides.css" media="screen">
 <link rel="stylesheet" type="text/css" href="../css/yj_2016.css">
 <link rel="stylesheet" href="../css/pub_mod.css">
+@include('includes.login')
 <!-- 游记新版轮播 start -->
 <div id="full-screen-slider" class="head">
 

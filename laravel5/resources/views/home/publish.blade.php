@@ -9,7 +9,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../css/foot.css">
 	<link rel="stylesheet" type="text/css" href="../css/jquery.css">
-
+    @include('includes.publishLogin')
 	<title>游记-发表游记</title>
         <meta content="游记-发表游记" name="keywords">
             <meta content="游记-发表游记" name="description">
@@ -459,4 +459,6 @@
 </script>
 		<!-- common footer start -->
         <!-- siteMap S -->
-</body></html>
+</body>
+@include('includes.foot'))
+</html>

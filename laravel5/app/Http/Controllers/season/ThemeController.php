@@ -113,6 +113,8 @@ class ThemeController extends Controller {
 		
 		if(empty($u_id))
 		{
+            $url = $_SERVER['HTTP_REFERER'];
+            Session::put('url',$url);
 			return redirect('blo');		
 		}
 		
