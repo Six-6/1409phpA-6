@@ -93,7 +93,10 @@ class TravelnotesController extends BaseController {
 		return view('admin.audit',['T_audit' => $flights]);
 	}
 	
-	/**审核**/
+	/**
+	 * @审核*
+	 * @return [type] [description]
+	 */
 	public function updata()
 	{
 		//接取审核id
@@ -109,7 +112,10 @@ class TravelnotesController extends BaseController {
 	
 	/************************** 经典 回顾 ******************************/
 	
-	/**经典回顾**/
+	/**
+	 * @经典回顾*
+	 * @return [type] [description]
+	 */
 	public function classics()
 	{
 		//页数
@@ -127,7 +133,10 @@ class TravelnotesController extends BaseController {
 	}
 
 	
-	/**经典回顾删除**/
+	/**
+	 * @经典回顾删除*
+	 * @return [type] [description]
+	 */
 	public function deletes()
 	{
 		//接取要删除id
@@ -140,7 +149,10 @@ class TravelnotesController extends BaseController {
 		return redirect('admin/classics');
 	}
 	
-	/**游记加精**/
+	/**
+	 * @游记加精
+	 * @return [type] [description]
+	 */
 	public function essences()
 	{
 		//接取要删除id
@@ -154,8 +166,9 @@ class TravelnotesController extends BaseController {
 	}
 	
 	/**
-	*@当季推荐
-	*/
+	 * @当季推荐
+	 * @return [type] [description]
+	 */
 	public function season()
 	{
 		//调用model层

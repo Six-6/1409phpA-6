@@ -3,9 +3,9 @@ auto;height:auto;padding-bottom:50px;background:#f4f7f1;position:relative}.cbg{b
 auto}.top_tip{border-bottom:1px solid #d7d7d7;font-size:16px;color:#333;font-family:"Microsoft Yahei";padding-bottom:10px;margin-bottom:20px}.top_tip
 strong{font-weight:bold}.main_tit
 .tt{color:#434343;font-size:20px;font-weight:bold;font-family:"Microsoft Yahei";float:left;padding-bottom:10px}.main
-.descontent{width:788px;margin-top:0}.nav-ind{width:100%;min-width:1000px;height:105px;background:url(http://img3.tuniucdn.com/img/20140505/indicator/navind.png) repeat;margin-bottom:35px}.navbar{width:1000px;height:105px;margin:0
+.descontent{width:788px;margin-top:0}.nav-ind{width:100%;min-width:1000px;height:105px;background-color: #39b778; repeat;margin-bottom:35px}.navbar{width:1000px;height:105px;margin:0
 auto}.navbar
-.indlogo{background:url(http://img3.tuniucdn.com/img/20140505/indicator/indlogo.png) no-repeat;_background:url(http://img3.tuniucdn.com/img/20140505/indicator/indlogo8.png) no-repeat;width:315px;height:105px;float:left}.navbar
+.indlogo{background:url(../image/huiwan.bmp) no-repeat;_background:url(http://img3.tuniucdn.com/img/20140505/indicator/indlogo8.png) no-repeat;width:315px;height:105px;float:left}.navbar
 .indsep{padding-left:38px;padding-right:38px;float:left;height:105px;cursor:pointer;display:block}.navbar
 .indsep.selected{background:#F4F7F1}.navbar .indsep:hover{background:#F4F7F1}.shouye,.list,.tour,.trend,.intour,.theme,.navbar .indsep.selected .intour,.navbar .indsep:hover .intour,.navbar .indsep:hover .theme,.navbar .indsep.selected .theme,.navbar .indsep:hover .trend,.navbar .indsep.selected .trend,.navbar .indsep.selected .shouye,.navbar .indsep:hover .shouye,.navbar .indsep.selected .list,.navbar .indsep:hover
 .list{background:url(http://img3.tuniucdn.com/img/20140505/indicator/indicons.png?v=2) no-repeat;_background:url(http://img3.tuniucdn.com/img/20140505/indicator/indicons2.png?v=2) no-repeat;float:left;margin-top:30px;padding-top:30px;font-family:'microsoft yahei';font-weight:bold;font-size:16px}.shouye{background-position:-52px 0px;width:35px;height:8px;color:#fff}.navbar .indsep.selected

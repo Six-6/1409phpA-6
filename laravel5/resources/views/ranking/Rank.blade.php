@@ -35,16 +35,14 @@
 <div class="wrapmain">
 		<div class="nav-ind">
 			<div class="navbar">
-				
+				<div class="indlogo"></div>
 				<a href="{{URL('home/siterecommend')}}" class="indsep" id="shouye"><div class="shouye">首页</div></a>
 
                 <a href="{{URL('home/ranking')}}" class="indsep selected" id="list"><div class="list">排行榜</div></a>
                                 
 				
 				<a href="{{URL('home/themes')}}" class="indsep" id="theme"><div class="theme">主题推荐</div></a>
-				<a href="http://top.tuniu.com/notes/" class="indsep" id="intour">
-                    <p class="inactive"></p>
-                    <div class="intour">人在旅途</div></a>
+				
 			</div>
 		</div>
 <div class="main">

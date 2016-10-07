@@ -9,7 +9,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../css/foot.css">
 	<link rel="stylesheet" type="text/css" href="../css/jquery.css">
-    @include('includes.publishLogin')
+
 	<title>游记-发表游记</title>
         <meta content="游记-发表游记" name="keywords">
             <meta content="游记-发表游记" name="description">
@@ -41,7 +41,11 @@
 <link rel="stylesheet" type="text/css" href="../css/umeditor-ex.css">
 <link rel="stylesheet" type="text/css" href="../css/travelnotes.css">
 <link rel="stylesheet" type="text/css" href="../css/common_foot_v3_002.css">
-
+  <div class="top_area">
+            <div class="wrap clearfix" style="background:#fff;">
+                @include('includes.rankLogin')
+            </div>
+        </div> 
 <!--main content START-->
 <div class="bodybg-gray">
 	<div class="wrap clearfix">
@@ -86,6 +90,26 @@
 				position: relative;
 				top: 1px;
 			}
+
+			.mask {       
+	            position: absolute; margin-left:200px;top: 0px;  background-color: #fff8dc;     
+	            z-index: 30000; left: 0px;     
+	            opacity:1; -moz-opacity:1;
+	            border-style: double;  
+	        } 
+	        .hengzhe{
+	        	width: 400px;height: 50px; background-color:#f0ffff;
+	        }
+	        .spans{
+	        	width: 50px;
+	        	height: 30px;
+
+	        	text-align:center;
+	        	margin-top:5px;
+	        	margin-left:5px;
+	        	float: left;
+	        }
+	        #sub{width:100px;height:35px;line-height:35px;background-color:#DCDCDC;border:none;}
 		</style>
 		<script>
 			$(document).on("click",".button",function(){
@@ -96,11 +120,11 @@
 		</script>	
 		<div class="publish-left clearfix">
 
-			<div >
-			<button class="button" value="1">快门</button>&nbsp&nbsp
-			<button class="button" value="2">美食</button>&nbsp&nbsp
-			<button class="button" value="3">购物</button>&nbsp&nbsp
-			<button class="button" value="4">文艺</button>
+			<div>
+			<button class="button" style="background:#fffd70" value="1">快门</button>&nbsp&nbsp
+			<button class="button" style="background:#fa8072" value="2">美食</button>&nbsp&nbsp
+			<button class="button" style="background:#7fffd4" value="3">购物</button>&nbsp&nbsp
+			<button class="button" style="background:#00bfff" value="4">文艺</button>
 			</div>
 			&nbsp&nbsp
 			<!-- 游记标题 -->
@@ -110,20 +134,30 @@
 				<textarea class="placeholder" name="p-title" id="p-title" maxlength="30" rows="1" onblur="getTripsTitle(this.value)">给游记取个好标题，为自己代言~</textarea>
 				<span class="input-limit">0/30</span>
 			</div>
+			
+			<div ><img src="../image/xuanze.bmp" style="background:#fff0f5" onclick="showMask()"><p>选择地区：<span id="sfv"></span>
+			<input id="cvih" type="hidden" name="region" value=""></p></div>
+			<div id="mask" class="mask" style="display:none">
+					<div class="hengzhe"><span style="margin-top:10px;font-size:25px;;color:#c0c0c0;">&nbsp p l e a s e</span><img onclick="hideMask()" width="30" height="30" style="float:right;margin-top:10px" src="../image/cuo.bmp"></div>
+					@foreach($region as $val)
+					<div class="spans"><a class="dianwo" pid="{{$val->r_id}}" href="javascript:void(0);">{{$val->r_region}}</a></div>
+					@endforeach
+
+			</div> 
 			<div style="height:20px"></div>
             
-			<div class="publish-main" id="haotamanan" index='0' style="background-color:#EEEEDD;">                              
-                <textarea class="placeholder"  style="font-size:15px; background-color:#EEEEDD; border: 10px solid ;" name="II[]" rows="20" cols="93">给自己本次游记一个总结吧</textarea>
+			<div class="publish-main" id="haotamanan" index='0' style="background-color:#EEEEDD;">                                
+                <textarea maxlength="170" class="placeholder"  style="font-size:15px; background-color:#fff5ee; border: 8px solid ;" name="II[]" rows="20" cols="93">给自己本次游记一个总结吧</textarea>
                 <input type='hidden' name='_token' value='{{csrf_token()}}'>
                 <input type='hidden' name='path[]' value='' class='cls0'>
                         <p>文件:<input type="file" name="photo[]" >
-                        <em><input type="button"  value=" 提 交 " class="photo" ></em></p> 
+                        <em><input type="button"  value=" 上 传 照 片" class="photo" >*选择一张有代表的照片</em></p> 
                         
 
                 <div class="img0"></div>        
                 <div style="height:20px"></div>                           
             </div>
-            <input type="submit"  value=" 提 交 ">
+            <input type="submit"  value=" 提 交 " id="sub">
             </form>
 		</div>
 		
@@ -134,7 +168,7 @@
         num=0;
         $('#add').click(function(){
             num++;
-            $('#haotamanan').append("<div style='height:30px; width:50px; background-color:#33FF33; text-align:center;font-size:20px;'><font class='"+num+"' style='height:120px; width:120px;'>DAY"+num+"</font></div><div index='"+num+"' class='"+num+"'><textarea class='placeholder'  style='font-size:15px; background-color:#EEEEDD; border: 10px solid ;' name='II[]' rows='20' cols='93'>给自己本次游记一个总结吧</textarea><input type='hidden' name='_token' value='{{csrf_token()}}'><input type='hidden' name='path[]' value='' class='cls"+num+"'><p>文件:<input type='file' name='photo[]' ><em><input type='button'  value=' 提 交 ' class='photo' ></em></p><div class='img"+num+"'></div><div style='height:20px'></div> </div>"); 
+            $('#haotamanan').append("<div style='height:30px; width:50px; background-color:#33FF33; text-align:center;font-size:20px;'><font class='"+num+"' style='height:120px; width:120px;'>DAY"+num+"</font></div><div index='"+num+"' class='"+num+"'><textarea class='placeholder'  style='font-size:15px; background-color:#EEEEDD; border: 10px solid ;' name='II[]' rows='20' cols='93'>给第"+num+"天一个总结吧</textarea><input type='hidden' name='_token' value='{{csrf_token()}}'><input type='hidden' name='path[]' value='' class='cls"+num+"'><p>文件:<input type='file' name='photo[]' ><em><input type='button'  value=' 提 交 ' class='photo' ></em></p><div class='img"+num+"'></div><div style='height:20px'></div> </div>"); 
         })
         // $(".trip-fold").click(function(){
         //     // alert($(this).parent().html())
@@ -161,11 +195,31 @@
             success: function (returndata) {  
                 console.log(returndata);
                 $(".img"+num).html("<img width='100px' height='100px' src='../home/upload/"+returndata+"'>")
+                $(".pho").html("<img width='100px' height='100px' src='../home/upload/"+returndata+"'>")
                 $(".cls"+num).val("../home/upload/"+returndata)
             }
      });  
     })
-                         
+
+    function showMask(){     
+        $("#mask").css("height","400px");     
+        $("#mask").css("width","400px");     
+        $("#mask").show();     
+    }  
+    //隐藏遮罩层  
+    function hideMask(){     
+        $("#mask").hide();          
+    } 
+
+    $('.dianwo').on('click',function(){
+    	var region_id = $(this).attr('pid');
+    	var region_name = $(this).html();
+    	$('#sfv').html(region_name)
+    	$('#cvih').val(region_id)
+
+    	$("#mask").hide();  
+    	
+    })                 
 </script>
 		
 		
@@ -228,7 +282,7 @@
 					已上传照片
 					<a href="javascript:void(0);" class="manager-btn" onclick="showUploadImg(10108186);">管理</a>
 				</p>
-				<div class="photo-uploaded-list clearfix">
+				<div id="pho" class="photo-uploaded-list clearfix">
 					
 									<p class="no-photo">暂无照片哦</p>
 									<div id="pagination">

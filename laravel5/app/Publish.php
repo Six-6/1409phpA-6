@@ -13,6 +13,13 @@ use Illuminate\Pagination\Paginator;
 
 class Publish extends Model{
 
+	public function area()
+	{
+		$region = DB::table('region')->select('r_region','r_id')->whereIn('p_id',[1,2])->get();
+
+		return $region;
+	}
+
 	public function lish($data)
 	{
 		//取出第几个上传的图片
@@ -36,10 +43,39 @@ class Publish extends Model{
 
 	public function addday($data,$u_id)
 	{
+		//生成随机数
+		$arr=rand(10000,99999);
+
+		//取一个区间 49995 - 50000
+		if($arr > 49995 && $arr < 50000)
+		{
+			$time = date('Y-m-d H:i:s',time());
+			$region = DB::table('activity')->where('a_id',1)->first();
+			//转化数组
+			$datas = json_decode(json_encode($region),true);
+			if ($datas['overtime'] == "0000-00-00 00:00:00") 
+			{
+				//活动永久开放
+				$aci['a_id'] = 1;
+				$aci['u_id'] = $u_id;
+				$aci['details'] = "写游记赢大奖";
+				$ids = DB::table('prize')->insert($aci);	
+			}
+			else if($datas['overtime'] > $time)
+			{
+				$aci['a_id'] = 1;
+				$aci['u_id'] = $u_id;
+				$aci['details'] = "写游记赢大奖";
+				$ids = DB::table('prize')->insert($aci);	
+			}
+
+		}
+
 		$title = $data['p-title'];
 		$s_desc = $data['II'];
 		$t_img = $data['path'];
 		$t_type = $data['t_type'];
+		$region = $data['region'];
 		$t_times = date('Y-m-d H:i:s',time());
 
 		foreach ($s_desc as $key => $value) {
@@ -47,6 +83,7 @@ class Publish extends Model{
 			$datas[$key]['t_title'] = strip_tags($title);
 			$datas[$key]['t_times'] = $t_times;
 			$datas[$key]['t_type'] = $t_type;
+			$datas[$key]['t_region'] = $region;
 			$datas[$key]['u_id'] = $u_id;
 			foreach ($t_img as $k => $v) {
 				$datas[$k]['t_img'] = $v;
@@ -57,7 +94,7 @@ class Publish extends Model{
 			$ids = DB::table('travels')->insertGetId($v);
 			$tt_id[]['tt_id']= $ids; 
 		}
-	
+
 		$b_id = DB::table('bination')->insertGetId($tt_id[0]);
 
 		unset($tt_id[0]);
@@ -68,6 +105,10 @@ class Publish extends Model{
 	
 		$panduan = DB::table('bination')->insert($tt_id);
 		
+		if($panduan)
+		{
+			
+		}
 		return $panduan;		
 	}
 

@@ -16,7 +16,7 @@ class Siterecommend extends Model{
 	{
 		//当季玩什么
 		$data['carousel'] = DB::table('inseason')->get();
-		
+
 		//权威控
 		$user = DB::table('login')->get();
 		
@@ -39,19 +39,19 @@ class Siterecommend extends Model{
 		//查询下单数超过五个的用户
 		foreach($num as $key => $value)
 		{
-			if($value > 5)
+			if($value > 4)
 			{
 				$new_id[]=$key;
 			}
 			else
 			{
-				$data['authority'] = "";
+				$new_id[]="";
 			}
 		}
-		
+
 		//查询对应的id 发表的评论
-		$data['authority'] = DB::table('travels')->join('bination','travels.tt_id','=','bination.tt_id')->where('f_id',0)->whereIn('u_id',$new_id)->orderBy('t_times','desc')->limit(5)->get();
-		
+		$data['authority'] = DB::table('travels')->join('bination','travels.tt_id','=','bination.tt_id')->where('f_id',0)->whereIn('u_id',$new_id)->orderBy('t_browse','desc')->limit(5)->get();
+		///print_r($data);die;
 	
 		/**
 		*@尝鲜人 

@@ -11,7 +11,7 @@ $u_id=Session::get("u_id");
 <div class="top1">
 
     @if(empty($name))
-        <div class="conter"><span>欢迎访问 <a href="#">惠玩旅行社官网</a></span>　请
+        <div class="conter"><span>欢迎访问 <a href="{{URL('/')}}">惠玩旅行社官网</a></span>　请
     <span id="_Check_head_Login">
 
     <span><a href="{{URL('blo')}}">登录</a></span>
@@ -19,7 +19,7 @@ $u_id=Session::get("u_id");
 
     <span><a href="{{URL('register')}}" id="">注册</a></span>
         @else
-            <div class="conter"><span>欢迎光临 <a href="#">惠玩旅行社官网</a></span>　
+            <div class="conter"><span>欢迎光临 <a href="{{URL('/')}}">惠玩旅行社官网</a></span>　
   <span id="_Check_head_Login">
 
         <span><a href="{{URL('home/userhome')}}" >{{$name}}</a></span>

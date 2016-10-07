@@ -16,21 +16,12 @@
 <script type="text/javascript">function selectTag(showContent,selfObj){ var tag = document.getElementById("tags").getElementsByTagName("li"); var taglength = tag.length; for(i=0; i<taglength; i++){ tag[i].className = ""; } selfObj.parentNode.className = "selectTag"; for(i=1; j=document.getElementById("tagContent"+i); i++){ j.style.display = "none"; } document.getElementById(showContent).style.display = "block";}var startCity = document.getElementById("startCity");if(startCity){ startCity.onmouseover = function(){ startCity.className = "head_start_city change_tab"; }; startCity.onmouseout = function(){ startCity.className = "head_start_city"; };}function getCookie(objName){ var arrStr = document.cookie.split("; "); for(var i = 0;i < arrStr.length;i ++){ var temp = arrStr[i].split("="); if(temp[0] == objName) return unescape(temp[1]); } return false;}var tuniuPPhoneDiv = document.getElementById("tuniu_400_num_phone");var tuniuPPhoneNumber = getCookie("p_phone_400");if (tuniuPPhoneDiv) { if (tuniuPPhoneNumber) { tuniuPPhoneDiv.innerHTML = tuniuPPhoneNumber; } else { tuniuPPhoneDiv.innerHTML = "4007-999-999"; }}$(function($) { var sub = $("#keyword-input-sub").val(); if(sub && sub != ''){ $("#keyword-input").val(sub); }});</script><!-- 页面类型 -->
 <input name="page_type" id="page_type" value="130000" type="hidden">
 
-@include('includes.authLogin')
-    <!--start 面包屑和目的地导航 -->
-        <div class="top_area">
+<div class="top_area">
             <div class="wrap clearfix" style="background:#fff;">
-                <div class="crumbs fl">
-                    <a href="siterecommend" class="word" rel="nofollow">攻略首页</a>
-
-                    <a href="note" target="_blank" rel="nofollow" class="word">游记</a>
-                    <a href="http://www.tuniu.com/way/" target="_blank" rel="nofollow" class="word">达人玩法</a>
-                    <a href="ranking" rel="nofollow" class="word cur">风向标</a>
-                    <a href="http://www.tuniu.com/traveler" target="_blank" rel="nofollow" class="word">旅游达人</a>
-                    <a href="http://ask.tuniu.com/" target="_blank" rel="nofollow" class="word">攻略问答</a>
-                </div>
+                @include('includes.rankLogin')
             </div>
-        </div>
+        </div> <!--start 面包屑和目的地导航 -->
+
 
 <div class="wrapmain">
 		<div class="nav-ind">
@@ -42,9 +33,7 @@
                                 
 				
 				<a href="{{URL('home/themes')}}" class="indsep" id="theme"><div class="theme">主题推荐</div></a>
-				<a href="http://top.tuniu.com/notes/" class="indsep" id="intour">
-                    <p class="inactive"></p>
-                    <div class="intour">人在旅途</div></a>
+				
 			</div>
 		</div>
 <!-- body-->
@@ -60,8 +49,8 @@
     <div class="notes-title maintitle"><h1>当季玩什么</h1></div>
 @foreach($data['carousel'] as $error1)
 <div class="slide-card">
-    <a href="http://top.tuniu.com/topic/d1277" target="_blank" rel="nofollow">
-        <img style="display: inline;" data-src="http://m.tuniucdn.com/fb2/t1/G2/M00/5A/31/Cii-TFfNM8OIamBpAAFpuEtHBVgAACE0QIJAPAAAWnQ412_w800_h0_c0_t0.jpg" src="{{$error1 -> s_image}}" alt="{{$error1 -> s_name}}" height="260" width="200">
+    <a href="{{URL('home/scenicDetails')}}?ssid={{$error1 -> s_id}}"  rel="nofollow">
+        <img style="display: inline;"  src="{{$error1 -> s_image}}" alt="{{$error1 -> s_name}}" height="260" width="200">
         <div class="pwhat-bg"></div>
         <div class="pwhat-detail">
             <p class="pwhat-title">{{$error1 -> s_name}}</p>
@@ -91,24 +80,33 @@
     </div>
     <div class="wall-intro intro-one">当别人还在研究世界必去的100个地方时，他们会说“我去过了”</div>
 </div>
-<div class="product-one">
-		@foreach($data['authority'] as $error2)
-        <div class="product-list">
-            <a href="{{URL('home/details')}}?id={{$error2 -> tt_id}}"><img style="display: inline;" src="{{$error2 -> t_img}}" alt="{{$error2 -> t_title}}" height="140" width="250"></a>
-                        <div class="product-title">
-                <a href="{{URL('home/details')}}?id={{$error2 -> tt_id}}" >{{$error2 -> t_title}}</a>
+<div class="product-one" >
+        @if(!empty($data['authority']))
+    		@foreach($data['authority'] as $error2)
+            <div class="product-list">
+                <a href="{{URL('home/details')}}?sid={{$error2 -> tt_id}}"><img style="display: inline;" src="{{$error2 -> t_img}}" alt="{{$error2 -> t_title}}" height="140" width="250"></a>
+                            <div class="product-title">
+                    <a href="{{URL('home/details')}}?sid={{$error2 -> tt_id}}" >{{$error2 -> t_title}}</a>
+                </div>
+                <a class="product-title-bg" href="http://top.tuniu.com/topic/d106" ></a>
             </div>
-            <a class="product-title-bg" href="http://top.tuniu.com/topic/d106" ></a>
-        </div>
-        @endforeach      
-                <div class="product-list">
-            <img style="display: inline;" data-src="http://img3.tuniucdn.com/img/201506091800/indicator/more1.jpg" src="../image/more1.jpg" alt="更多精彩" height="140" width="250">
-            <a  href="{{URL('home/themes')}}" class="product-more indexicon">更多精彩</a>
-            <a style="overflow: hidden; height: 0px;" class="product-bg" href="http://top.tuniu.com/topic/" ></a>
-        </div>
+            @endforeach      
+                    <div class="product-list">
+                <img style="display: inline;" data-src="http://img3.tuniucdn.com/img/201506091800/indicator/more1.jpg" src="../image/more1.jpg" alt="更多精彩" height="140" width="250">
+                <a  href="{{URL('home/themes')}}" class="product-more indexicon">更多精彩</a>
+                <a style="overflow: hidden; height: 0px;" class="product-bg" href="http://top.tuniu.com/topic/" ></a>
+            </div>
+        @else
+      
+            <center>
+                <img src="../image/zuiqiang.jpg"></br>
+                <p style="font-size:20px;color:#87cefa">此地暂无权威 是否要<a id="zhanling" href="{{URL('home/publishs')}}">占领</a>他</p></br>
+                <p style="font-size:15px;color:#87cefa">写游记赢大奖，大量<a href="{{URL('home/exchangeShow')}}">积分</a>等你拿</p>
+            </center>
+          
+        @endif
     </div>
     </div>
-    
 
 
 
@@ -126,9 +124,9 @@
 <div class="product-one">
 		@foreach($data['fresh'] as $error3)
         <div class="product-list">
-            <a href="{{URL('home/details')}}?id={{$error3 -> tt_id}}" ><img style="display: inline;"  src="{{$error3 -> t_img}}" alt="{{$error3 -> t_title}} " height="140" width="250"></a>
+            <a href="{{URL('home/details')}}?sid={{$error3 -> tt_id}}" ><img style="display: inline;"  src="{{$error3 -> t_img}}" alt="{{$error3 -> t_title}} " height="140" width="250"></a>
                         <div class="product-title">
-                <a href="{{URL('home/details')}}?id={{$error3 -> tt_id}}" >{{$error3 -> t_title}} </a>
+                <a href="{{URL('home/details')}}?sid={{$error3 -> tt_id}}" >{{$error3 -> t_title}} </a>
             </div>
             <a class="product-title-bg" href="http://top.tuniu.com/topic/d323" ></a>
         </div>
@@ -158,9 +156,9 @@
 <div class="product-one">
         @foreach($data['shutter'] as $error4)
         <div class="product-list">
-            <a href="{{URL('home/details')}}?id={{$error4 -> tt_id}}" ><img style="display: inline;"  src="{{$error4 -> t_img}}" alt="{{$error4 -> t_title}} " height="140" width="250"></a>
+            <a href="{{URL('home/details')}}?sid={{$error4 -> tt_id}}" ><img style="display: inline;"  src="{{$error4 -> t_img}}" alt="{{$error4 -> t_title}} " height="140" width="250"></a>
                         <div class="product-title">
-                <a href="{{URL('home/details')}}?id={{$error4 -> tt_id}}" >{{$error4 -> t_title}} </a>
+                <a href="{{URL('home/details')}}?sid={{$error4 -> tt_id}}" >{{$error4 -> t_title}} </a>
             </div>
             <a class="product-title-bg" href="http://top.tuniu.com/topic/d323" ></a>
         </div>
@@ -191,9 +189,9 @@
 <div class="product-one">
         @foreach($data['cate'] as $error5)
         <div class="product-list">
-            <a href="{{URL('home/details')}}?id={{$error5 -> tt_id}}" ><img style="display: inline;"  src="{{$error5 -> t_img}}" alt="{{$error5 -> t_title}} " height="140" width="250"></a>
+            <a href="{{URL('home/details')}}?sid={{$error5 -> tt_id}}" ><img style="display: inline;"  src="{{$error5 -> t_img}}" alt="{{$error5 -> t_title}} " height="140" width="250"></a>
                         <div class="product-title">
-                <a href="{{URL('home/details')}}?id={{$error5 -> tt_id}}" >{{$error5 -> t_title}} </a>
+                <a href="{{URL('home/details')}}?sid={{$error5 -> tt_id}}" >{{$error5 -> t_title}} </a>
             </div>
             <a class="product-title-bg" href="http://top.tuniu.com/topic/d323" ></a>
         </div>
@@ -224,11 +222,11 @@
 <div class="product-one">
         @foreach($data['shopping'] as $error6)
         <div class="product-list">
-            <a href="{{URL('home/details')}}?id={{$error6 -> tt_id}}" ><img style="display: inline;"  src="{{$error6 -> t_img}}" alt="{{$error6 -> t_title}} " height="140" width="250"></a>
+            <a href="{{URL('home/details')}}?sid={{$error6 -> tt_id}}" ><img style="display: inline;"  src="{{$error6 -> t_img}}" alt="{{$error6 -> t_title}} " height="140" width="250"></a>
                         <div class="product-title">
-                <a href="{{URL('home/details')}}?id={{$error6 -> tt_id}}" >{{$error6 -> t_title}} </a>
+                <a href="{{URL('home/details')}}?sid={{$error6 -> tt_id}}" >{{$error6 -> t_title}} </a>
             </div>
-            <a class="product-title-bg" href="{{URL('home/details')}}?id={{$error6 -> tt_id}}" ></a>
+            <a class="product-title-bg" href="{{URL('home/details')}}?sid={{$error6 -> tt_id}}" ></a>
         </div>
         @endforeach
                 
@@ -257,11 +255,11 @@
 <div class="product-one">
         @foreach($data['literature'] as $error7)
         <div class="product-list">
-            <a href="{{URL('home/details')}}?id={{$error7 -> tt_id}}" ><img style="display: inline;"  src="{{$error7 -> t_img}}" alt="{{$error7 -> t_title}} " height="140" width="250"></a>
+            <a href="{{URL('home/details')}}?sid={{$error7 -> tt_id}}" ><img style="display: inline;"  src="{{$error7 -> t_img}}" alt="{{$error7 -> t_title}} " height="140" width="250"></a>
                         <div class="product-title">
-                <a href="{{URL('home/details')}}?id={{$error7 -> tt_id}}" >{{$error7 -> t_title}} </a>
+                <a href="{{URL('home/details')}}?sid={{$error7 -> tt_id}}" >{{$error7 -> t_title}} </a>
             </div>
-            <a class="product-title-bg" href="{{URL('home/details')}}?id={{$error7 -> tt_id}}" ></a>
+            <a class="product-title-bg" href="{{URL('home/details')}}?sid={{$error7 -> tt_id}}" ></a>
         </div>
         @endforeach
                 
@@ -288,12 +286,12 @@
             <div class="mouth-list">
 @foreach ($data['month'] as $error8)			
 <div class="mouth-card" name="301">
-    <img data-src="http://m.tuniucdn.com/filebroker/cdn/snc/9e/24/9e2493c550f94737126e23e01b64c7ac_w800_h0_c0_t0.jpg" src="{{$error8 -> m_img}}" alt="" height="216" width="192">
-    <a class="mouth-bag indexicon" href="http://www.tuniu.com/g900/guide-0-0/" target="_blank">
+    <a href="{{URL('home/pushClass')}}?jsid={{$error8 -> r_id}}"><img src="{{$error8 -> m_img}}" alt="" height="216" width="192"></a>
+    <a class="mouth-bag indexicon" href="{{URL('home/pushClass')}}?jsid={{$error8 -> r_id}}" >
 	{{$error8 -> m_name}}    <div class="mouth-detail">
                 </div>
     </a>
-    <a class="mouth-bg" href="http://www.tuniu.com/g900/guide-0-0/" target="_blank"></a>
+    <a class="mouth-bg" href="{{URL('home/pushClass')}}?jsid={{$error8 -> r_id}}" ></a>
 </div>
 @endforeach
     </div>
@@ -404,248 +402,13 @@ $().ready(function(){
 <!--start foot-->
 <!-- siteMap S -->
 <link rel="stylesheet" type="text/css" href="../css/common_foot_v3.css"> <div class="trav_sev">
-        <ul class="ts_box clearfix">
-            <li class="trav_l_first">
-                <i class="ts_1"></i>
-                <dl class="trav_l ">
-                    <dt class="tl_tt"><a>去旅游</a></dt>
-                    <dd class="tl_w">
-                        <p>
-                            <a href="http://www.tuniu.com/tours/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-1']);">跟团游</a>
-                            <a href="http://www.tuniu.com/pkg/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-2']);">自助游</a>
-                            <a href="http://www.tuniu.com/drive/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-3']);">自驾游</a>
-                            
-                        </p>
-                        <p>
-                            <a href="http://www.tuniu.com/theme/haidao/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-4']);">海岛游</a>
-                            <a href="http://www.tuniu.com/flight/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-5']);">机票</a>
-                            <a href="http://youlun.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-6']);">邮轮</a>
-                        </p>
-                        <p>
-                            <a href="http://menpiao.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-7']);">门票</a>
-                            <a href="http://www.tuniu.com/theme/qinzi/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-8']);">亲子游</a>
-                            <a href="http://www.tuniu.com/visa/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-9']);">签证</a>
-                        </p>
-                        <p>
-                            <a href="http://super.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-10']);">机票+酒店</a>
-                            <a href="http://www.tuniu.com/theme/miyue/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-11']);">蜜月游</a>
-                            <a href="http://hotel.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-12']);">酒店</a>
-                        </p>
-                        <p>
-                            <a href="http://temai.tuniu.com/laoyutuijian" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-13']);">老于推荐</a>
-                            <a href="http://www.tuniu.com/gongsi/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-14']);">公司旅游</a>
-                            <a href="http://www.tuniu.com/niuren/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-15']);">牛人专线</a>
-                        </p>
-                        <p>
-                            <a href="http://www.tuniu.com/zt/sfcf/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-16']);">首付出发</a>
-                            <a href="http://www.tuniu.com/local/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-17']);">当地玩乐</a>
-                            <a href="http://www.tuniu.com/zt/love/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_1','1-18']);">旅拍</a>
-                        </p>
-                    </dd>
-                </dl>
-            </li>
-            <li>
-                <i class="ts_2"></i>
-                <dl class="trav_l ">
-                    <dt class="tl_tt"><a>寻优惠</a></dt>
-                    <dd class="tl_w">
-                        <p><a href="http://temai.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_2','2-1']);">特卖</a></p>
-                        <p><a href="http://hotel.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_2','2-2']);">订酒店 返现金</a></p>
-                        <p><a href="http://1.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_2','2-4']);">一元夺宝</a></p>
-                        <p><a href="http://www.tuniu.com/bank/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_2','2-5']);">银行特惠游</a></p>
-                        <p><a href="http://www.tuniu.com/gt/guangfacxqq" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_2','2-6']);">银行分期游</a></p>
-                    </dd>
-                </dl>
-            </li>
-            <li>
-                <i class="ts_3"></i>
-                <dl class="trav_l ">
-                    <dt class="tl_tt"><a>看攻略</a></dt>
-                    <dd class="tl_w">
-                        <p><a href="http://go.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_3','3-1']);">攻略</a></p>
-                        <p><a href="http://top.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_3','3-2']);">途牛风向标</a></p>
-                        <p><a href="http://trips.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_3','3-3']);">游记</a></p>
-                        <p><a href="http://www.tuniu.com/way/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_3','3-4']);">达人玩法</a></p>
-                    </dd>
-                </dl>
-            </li>
-            <li>
-                <i class="ts_4"></i>
-                <dl class="trav_l ">
-                    <dt class="tl_tt"><a>查服务</a></dt>
-                    <dd class="tl_w tl_cont">
-                        <p>
-                            <a href="http://www.tuniu.com/help/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_4','4-1']);">帮助中心</a>
-                            
-                        </p>
-                        <p>
-                            <a href="http://www.tuniu.com/u/club" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_4','4-3']);">积分俱乐部</a>
-                            
-                        </p>
-                        <p>
-                            <a href="http://www.tuniu.com/static/sunshine_ensure/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_4','4-5']);">阳光保障</a>
-                        </p>
-                        <p><a href="http://train.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_4','4-2']);">火车时刻表</a></p>
-                        <p><a href="http://metro.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','tydb_wzdt_4','4-6']);">地铁路线图</a></p>
-                    </dd>
-                </dl>
-            </li>
-            <li class="trav_l_last">
-                <i class="ts_5"></i>
-                <dl class="trav_l ">
-                    <dt class="tl_tt"><a>途牛APP</a></dt>
-                    <dd class="tl_w tl_cont">
-                        <p>
-                            <a>扫描下载途牛APP</a>
-                        </p>
-                        <p>
-                            <img src="../image/Cii9EFZw-n2IdcknAAAWy1znY7MAABCTQG1hlYAABbj820.jpg">
-                        </p>
-                    </dd>
-                </dl>
-        </li></ul>
-    </div><!-- siteMap E -->
-<!-- three sun S -->
+       
 <div class="three_trav">
     <div class="thr_trav">
-        <a href="http://www.tuniu.com/static/sunshine_ensure/" target="_blank" style="display:block;width:100%;height:100%;">
+        <a href="http://www.tuniu.com/static/sunshine_ensure/"  style="display:block;width:100%;height:100%;">
             <em class="tn_text" id="service_phone_head_text">客户服务电话（免长途费）</em>
             <em class="tn_phone" id="service_phone_head_phone">4007-999-999</em>
         </a>
     </div>
 </div>
-<!-- three sun E -->
-<!-- four_ad S -->
-<!-- four_ad S -->
-    <div class="fourImgs">
-        <ul class="clearfix">
-                        <li>
-                <a href="http://1.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','点击','底部广告图_1_一元夺宝']);">
-                    <img src="../image/tn_footer_01.jpg" alt="一元夺宝" height="58" width="238">
-                </a>
-            </li>
-                        <li>
-                <a href="http://www.tuniu.com/zt/brand/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','点击','底部广告图_2_品牌合作']);">
-                    <img src="../image/tn_footer_042.jpg" alt="品牌合作" height="58" width="238">
-                </a>
-            </li>
-                        <li>
-                <a href="http://temai.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','点击','底部广告图_3_超值特卖-底部']);">
-                    <img src="../image/tn_footer_06.jpg" alt="超值特卖-底部" height="58" width="238">
-                </a>
-            </li>
-                        <li>
-                <a href="http://super.tuniu.com/" target="_blank" onclick="_gaq.push(['_trackEvent','common_bj','点击','底部广告图_4_超级自由行']);">
-                    <img src="../image/Cii9EFaWDQ2IFdVUAAAaUoTPAnAAABcxwP_x9YAABpq60.jpg" alt="超级自由行" height="58" width="238">
-                </a>
-            </li>
-                    </ul>
-    </div>
-    <!-- four_ad E -->
-    <!-- img_place S -->
-    <div class="img_place">
-        <a href="http://www.tuniu.com/niuren/" rel="nofollow" target="_blank" style="display: block;" onclick="_gaq.push(['_trackEvent','common_bj','点击','底部广告图_5_牛人专线']);">
-            <img src="../image/tn_footer_05l_007.jpg" alt="牛人专线" height="58" width="988">
-        </a>
-    </div>
-    <!-- img_place E -->
-<!-- four_ad E -->
-
-<!--start foot-->
-<div id="TN-footer" class="tn_footer datalazyload" data-lazyload-type="data" data-lazyload-from="textarea">
-        <p id="TN-24">途牛客服中心位于南京市 来电显示为 025-86859999 或 025-85080000</p>
-    <p>北京途牛国际旅行社有限公司，旅行社业务经营许可证编号：L-BJ-CJ00144　　上海途牛国际旅行社有限公司，旅行社业务经营许可证编号：L-SH-CJ00107
-    </p>
-    <p id="TN-links">
-        <a href="http://www.tuniu.com/corp/aboutus.shtml" target="_blank" rel="nofollow">关于我们</a>
-        <a $nofollow="" href="http://ir.tuniu.com/" target="_blank">Investor Relations</a>
-        <a href="http://www.tuniu.com/corp/contactus.shtml" target="_blank" rel="nofollow">联系我们</a>
-        <a href="http://www.tuniu.com/corp/advise.shtml" target="_blank" rel="nofollow">投诉建议</a>
-        <a rel="nofollow" href="http://www.tuniu.com/corp/advertising.shtml" target="_blank">广告服务</a>
-        <a rel="nofollow" href="http://www.tuniu.com/giftcard/" target="_blank">旅游券</a>
-        <a rel="nofollow" href="http://tuniu.zhiye.com/" target="_blank" style="color: red;">途牛招聘</a>
-        <a href="http://www.tuniu.com/corp/privacy.shtml" target="_blank" rel="nofollow">隐私保护</a>
-        <a href="http://www.tuniu.com/corp/duty.shtml" target="_blank" rel="nofollow">免责声明</a>
-        <a rel="nofollow" href="http://www.tuniu.com/corp/zizhi.shtml" target="_blank">旅游度假资质</a>
-        <a rel="nofollow" href="http://www.tuniu.com/theme/index/" target="_blank">主题旅游</a>
-        <a href="http://www.tuniu.com/corp/agreement.shtml" target="_blank" rel="nofollow">用户协议</a>
-        <a href="http://www.tuniu.com/corp/sitemap.shtml" target="_blank">网站地图</a>
-        <a rel="nofollow" target="_blank" href="http://www.tuniu.com/ueip/index.html">UEIP</a>
-        <a rel="nofollow" href="http://www.tuniu.com/help/" target="_blank">帮助中心</a>
-    </p>
-
-    <!-- #TN-links -->
-    <p id="copyright">Copyright © 2006-2016        <a rel="nofollow" href="http://www.tuniu.com/">南京途牛科技有限公司</a>
-        <a rel="nofollow" href="http://www.tuniu.com/">Tuniu.com</a> |
-        <a target="_blank" href="http://www.tuniu.com/corp/company.shtml" rel="nofollow">营业执照</a> |
-        <a target="_blank" href="http://www.miibeian.gov.cn/" rel="nofollow">ICP证：苏B2-20130006</a> |
-        <a target="_blank" href="http://www.miibeian.gov.cn/" rel="nofollow">苏ICP备12009060号</a> |
-        <a target="_blank" href="http://bj.tuniu.com/">北京旅游网</a>
-    </p>
-
-    <!-- thr_ads S -->
-<div class="thr_img">
-    <ul class="clearfix">
-        <li>
-            <a href="http://www.tuniu.com/tours/" target="_blank" onclick="_gaq.push(['_trackEvent','首页_bj','点击','底部广告图_6_跟团']);">
-                <img src="../image/footer_1.jpg" alt="跟团" height="38" width="175">
-            </a>
-        </li>
-        <li>
-            <a href="http://www.tuniu.com/pkg/" target="_blank" onclick="_gaq.push(['_trackEvent','首页_bj','点击','底部广告图_7_自助']);">
-                <img src="../image/footer_2.jpg" alt="自助" height="38" width="175">
-            </a>
-        </li>
-        <li>
-
-            <a href="http://www.tuniu.com/merchants/" target="_blank" onclick="_gaq.push(['_trackEvent','首页_bj','点击','底部广告图_8_供应商合作']);">
-                <img src="../image/bottom.jpg" alt="供应商合作" height="38" width="175">
-            </a>
-        </li>
-    </ul>
-</div>
-<!-- thr_ads E -->
-
-    <div class="slide_order clearfix" id="slideOrder">
-        <span class="fl">最新预订：</span>
-        <div class="fl w_940">
-            <ul style="width: 4602px; left: -364px;">
-                            <li><!--[6天前]-->用户***212预订&lt;塞班岛二日游&gt;北部观光半日游，军舰岛一日游&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                            <li><!--[10天前]-->用户***881预订&lt;埃及红海6晚8日自助游&gt;即时确认，含机票签证酒店，赠接送机，直飞红海，4种住宿可选升级&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                            <li><!--[22天前]-->用户***865预订&lt;埃及红海6晚8日自助游&gt;即时确认，含机票签证酒店，赠接送机，直飞红海，4种住宿可选升级&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                            <li><!--[24天前]-->用户***部预订&lt;途牛旅游节大促-迪拜4晚6天自助游&gt;入住2晚七星帆船酒店2晚凯悦，送帆船酒店自助晚餐两次，送冲沙，送接送机&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                        <li><!--[6天前]-->用户***212预订&lt;塞班岛二日游&gt;北部观光半日游，军舰岛一日游&nbsp;&nbsp;&nbsp;&nbsp;</li><li><!--[10天前]-->用户***881预订&lt;埃及红海6晚8日自助游&gt;即时确认，含机票签证酒店，赠接送机，直飞红海，4种住宿可选升级&nbsp;&nbsp;&nbsp;&nbsp;</li><li><!--[22天前]-->用户***865预订&lt;埃及红海6晚8日自助游&gt;即时确认，含机票签证酒店，赠接送机，直飞红海，4种住宿可选升级&nbsp;&nbsp;&nbsp;&nbsp;</li><li><!--[24天前]-->用户***部预订&lt;途牛旅游节大促-迪拜4晚6天自助游&gt;入住2晚七星帆船酒店2晚凯悦，送帆船酒店自助晚餐两次，送冲沙，送接送机&nbsp;&nbsp;&nbsp;&nbsp;</li></ul>
-        </div>
-    </div>
-    <div class="trav_corp">
-        <a id="___szfw_logo___" href="https://credit.szfw.org/CX20160128013521800380.html" rel="nofollow" target="_blank">
-            <img src="../image/chengxinOne.png" style="height:41px;" alt="中国互联网诚信示范企业" border="0">
-        </a>
-        <a href="http://net.china.cn/" rel="nofollow" target="_blank" onclick="tuniuRecorder.push('32_1_1_1_1_1')">
-            <img src="../image/buliang.png" alt="违法和不良信息举报中心" height="47" width="109">
-        </a>
-        <a href="http://js.cyberpolice.cn/webpage/index.jsp" rel="nofollow" target="_blank" onclick="tuniuRecorder.push('32_1_1_1_1_2')">
-            <img src="../image/wangluo.png" alt="网络110报警服务" height="47" width="110">
-        </a>
-        <img src="../image/cata.png" alt="cata航空资质认证" height="47" width="110">
-        <a target="_blank" rel="nofollow" href="http://www.isc.org.cn/" onclick="tuniuRecorder.push('32_1_1_1_1_3')">
-            <img src="../image/huiyuan.png" alt="中国互联网协会" height="47" width="110">
-        </a>
-        <a href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1797102919" rel="nofollow" target="_blank" onclick="tuniuRecorder.push('32_1_1_1_1_4')">
-            <img src="../image/3acomp.png" alt="中国互联网协会信用评价中心" height="47" width="110">
-        </a>
-
-        <a title="可信网站" target="_blank" href="https://ss.knet.cn/verifyseal.dll?sn=e14120832010056662smwq000000&amp;ct=df&amp;a=1&amp;pa=0.06350954016670585" rel="nofollow" onclick="tuniuRecorder.push('32_1_1_1_1_5')">
-            <img src="../image/chengxin.png" alt="诚信网站" height="47" width="110">
-        </a>
-        <a href="http://www.jsgsj.gov.cn:60101/keyLicense/verifKey.jsp?serial=320000163820121119100000009204&amp;signData=LvIMjwILeOCOnIt65a1kGAk+FxZKCnAoexteChdi5LEEvVGY5TUoYBJ15zmxNW1dwAE4U4mMREXkWocqMPODoh+IfB2ojCxtCvMF4gVdgsMXKTbkhemenyjWlproKM0XWYyPNEYxgn8H1kxvUgCWX35ExI1xLVWA3Zuw7ZiLdYM=" rel="nofollow" target="_blank" onclick="tuniuRecorder.push('32_1_1_1_1_6')">
-            <img src="../image/dianziyingye.png" alt="营业执照" height="47" width="110">
-        </a>
-        <a target="_blank" rel="nofollow" href="http://www.patachina.org/" onclick="tuniuRecorder.push('32_1_1_1_1_7')">
-            <img src="../image/pata.png" alt="亚太旅游协会会员单位" height="47" width="140">
-        </a>
-    </div>
-
-</div>
-
-</div></body></html>
+</body></html>

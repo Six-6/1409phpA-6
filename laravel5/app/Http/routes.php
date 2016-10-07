@@ -124,8 +124,10 @@ Route::group(['middleware' => ['common']], function () {
 	Route::get('admin/waydetail','WayController@waydetail');/**景点详情**/
 	/**图片上传**/
 	Route::post('admin/uploas', 'WayController@uploas');/**旅游景点添加**/
-
+	/**推荐管理**/
+	
 });
+	
 /**前台登录 退出 开始**/
 Route::get('blo','LoginController@index');/**前台登录**/
 Route::post('bloin','LoginController@bloin');/**前台登录**/
@@ -223,7 +225,7 @@ Route::post('home/dcomment', 'season\ThemeController@dcomment');//游记详情�
 Route::get('home/praise', 'season\ThemeController@praise');//游记点赞
 Route::get('home/publishs', 'season\PublishController@publish');//写游记
 Route::any('home/yfile', 'season\PublishController@yfile');//图片上传
-Route::post('home/collect', 'season\PublishController@collect');//图片上传
+Route::post('home/collect', 'season\PublishController@collect');//游记添加
 Route::get('home/mysit', 'season\PublishController@mysit');//我的游记
 
 
